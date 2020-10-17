@@ -26,8 +26,9 @@
   "scripts": {
     "start": "npm run build; open public/index.html",
     "build": "node ./bin/build-demo.js",
-    "test": "npm run lint",
-    "lint": "eslint ."
+    "test": "npm run build test:eslint test:pa11y",
+    "test:eslint": "eslint .",
+    "test:pa11y": "pa11y --reporter=cli $(pwd)/public/index.html >public/pa11y-results.txt"
   },
   "dependencies": {
     "css": "^3.0.0",
@@ -35,6 +36,7 @@
   },
   "devDependencies": {
     "eslint": "^7.11.0",
+    "pa11y": "^5.3.0",
     "resume-schema": "^0.1.3"
   }
 }
