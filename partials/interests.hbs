@@ -1,0 +1,25 @@
+{{#if resume.interests.length}}
+  <div id='interests' class='sectionBlock'>
+    <div class='sectionIntro'>
+      <div class='sectionName'>
+        <span>INTERESTS</span>
+      </div>
+      <div class='sectionIntroLine'></div>
+    </div>
+    <div class='sectionContent'>
+      <ul class='highlights'>
+        {{#each resume.interests}}
+          <li>
+            <span class='title'>{{name}}:</span>
+            {{#if keywords.length}}
+              {{#each keywords}}
+                <span>{{.}}</span>{{#unless @last}}, {{/unless}}
+              {{/each}}
+            {{/if}}
+          </li>
+        {{/each}}
+      </ul>
+    </div>
+    <div class='sectionLine'></div>
+  </div>
+{{/if}}

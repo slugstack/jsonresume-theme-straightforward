@@ -1,0 +1,38 @@
+{{#if resume.work.length}}
+  <div id='workBlock' class='sectionBlock'>
+    <div class='sectionIntro'>
+      <div class='sectionName'>
+        <span>WORK EXPERIENCE</span>
+      </div>
+      <div class='sectionIntroLine'></div>
+    </div>
+    <div class='sectionContent'>
+      {{#each resume.work}}
+        <div class='jobBlock'>
+          <div class='blockHeader'>
+            <span class='title'>{{position}}</span>
+            <span class='name'>{{name}}</span>
+            <span class='date'>
+              <time datetime="{{startDate}}">{{MONTH_YEAR startDate}}</time> &mdash;
+              {{#if endDate}}<time datetime="{{endDate}}">{{MONTH_YEAR endDate}}</time>{{else}}Present{{/if}}
+            </span>
+          </div>
+          {{#if website}}
+            <div class='website'><a href='{{website}}'>{{website}}</a></div>
+          {{/if}}
+          {{#if highlights.length}}
+            <ul class='highlights'>
+              {{#each highlights}}
+                <li>{{.}}</li>
+              {{/each}}
+            </ul>
+          {{/if}}
+          {{#unless @last}}
+            <div class='separator'></div>
+          {{/unless}}
+        </div>
+      {{/each}}
+    </div>
+  </div>
+  <div class='sectionLine'></div>
+{{/if}}
