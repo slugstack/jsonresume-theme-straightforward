@@ -24,6 +24,7 @@
     "style.css"
   ],
   "scripts": {
+    "build": "node ./bin/build-demo.js",
     "test": "npm run lint",
     "lint": "eslint ."
   },
@@ -32,6 +33,7 @@
     "handlebars": "^4.7.6"
   },
   "devDependencies": {
-    "eslint": "^7.11.0"
+    "eslint": "^7.11.0",
+    "resume-schema": "^0.1.3"
   }
 }
