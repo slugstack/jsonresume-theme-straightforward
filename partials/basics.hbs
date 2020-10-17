@@ -1,0 +1,43 @@
+{{#resume.basics}}
+  <div class='basics'>
+    <div id='nameBlock' class='largeFont'>
+      <span class='name'>{{name}}</span>
+    </div>
+
+    <div id='basicsBlock' class='smallFont'>
+
+      <div class='contactBlock'>
+        {{#if email}}
+          <span class='email'>{{email}}</span>
+        {{/if}}
+        {{#if phone}}
+          <span class='divider'>|</span>
+          <span class='phone'>{{phone}}</span>
+        {{/if}}
+        {{#location}}
+          <span class='divider'>|</span>
+          <span class='address'>
+            {{#if city}}{{city}}{{/if}}{{#if region}}, {{region}}{{/if}}
+          </span>
+        {{/location}}
+      </div>
+
+      {{#if profiles.length}}
+        <div id='profilesBlock'>
+          {{#each profiles}}
+            {{#if url}}
+              <span class='url'>
+                <a href='{{url}}'>{{network}}</a>
+              </span>
+              {{#unless @last}}<span class='divider'>|</span>{{/unless}}
+            {{/if}}
+          {{/each}}
+        </div>
+      {{/if}}
+
+    </div>
+
+    <div class='sectionLine'></div>
+
+  </div>
+{{/resume.basics}}

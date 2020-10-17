@@ -1,0 +1,25 @@
+{{#if resume.skills.length}}
+  <div id='skills' class='sectionBlock'>
+    <div class='sectionIntro'>
+      <div class='sectionName'>
+        <span>TECHNOLOGIES AND LANGUAGES</span>
+      </div>
+      <div class='sectionIntroLine'></div>
+    </div>
+    <div class='sectionContent'>
+      <ul class='highlights'>
+        {{#each resume.skills}}
+          <li>
+            <span class='title'>{{name}}:</span>
+            {{#if keywords.length}}
+              {{#each keywords}}
+                <span>{{.}}</span>{{#unless @last}}, {{/unless}}
+              {{/each}}
+            {{/if}}
+          </li>
+        {{/each}}
+      </ul>
+    </div>
+  </div>
+  <div class='sectionLine'></div>
+{{/if}}

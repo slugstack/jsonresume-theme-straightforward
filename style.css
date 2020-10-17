@@ -1,0 +1,185 @@
+body {
+  background: #EEEEEE;
+  font-size: 13px;
+  font-family: "Times New Roman", Times, sans-serif;
+  line-height: 1.4;
+  margin: 40px 0;
+}
+p {
+  line-height: 1.4;
+}
+ul {
+  margin-bottom: 0;
+}
+li {
+  margin-bottom: 2px;
+}
+a {
+  color: black;
+  text-decoration: underline;
+}
+
+#resume {
+  margin: 0 auto;
+  max-width: 600px;
+  padding: 40px 50px;
+  background: #fff;
+  border: 1px solid #ccc;
+  box-shadow: 2px 2px 4px #aaa;
+  -webkit-box-shadow: 2px 2px 4px #aaa;
+}
+
+.basics {
+  text-align: center;
+}
+
+.basics .divider {
+  font-weight: bold;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.largeFont {
+  font-size: 20px;
+}
+
+.smallFont {
+  font-size: 13px;
+}
+
+.sectionBlock {
+  display: block;
+  width: 100%;
+}
+
+.sectionName {
+  color: #004687;
+  display: block;
+  font-weight: bold;
+}
+
+.sectionLine {
+  border-color: none;
+  border-style: hidden;
+  border-width: 1px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.sectionIntroLine {
+  border-color: #004687;
+  border-style: solid;
+  border-width: 1px;
+  margin-top: 0px;
+  margin-bottom: 10px;
+}
+
+#workBlock .blockHeader,
+#volunteer .blockHeader
+{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#workBlock .blockHeader>*,
+#volunteer .blockHeader>*
+{
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 30%;
+}
+
+.blockHeader .date {
+  font-weight: bold;
+  text-align: right;
+}
+.blockHeader .name {
+  font-weight: bold;
+  text-align: center;
+}
+.blockHeader .title {
+  font-weight: bold;
+  text-align: left;
+}
+
+.sectionContent {
+  display: block;
+}
+
+.sectionContent ul {
+  padding-left: 20px;
+  margin-top: 6px;
+  list-style-type: circle;
+}
+
+.sectionContent .title {
+  font-weight: bold;
+}
+
+.sectionContent .date {
+  float: right;
+}
+
+.sectionContent .separator {
+  height: 14px;
+}
+
+.summary {
+  margin-top: 6px;
+}
+
+.jobBlock {
+  page-break-inside: avoid;
+}
+
+/* Media Queries */
+@media only screen and (max-width: 40em) {
+  body {
+    margin: 0;
+    font-size: 14px;
+  }
+  #resume {
+    margin: 0 auto;
+    max-width: 600px;
+    padding: 0.5em 1em;
+    border: none;
+  }
+  .sectionBlock {
+    flex-direction: column;
+  }
+  .sectionContent {
+    width: 100%;
+  }
+  .sectionContent .date {
+    padding-right: 2em;
+  }
+  .sectionName {
+    width: auto;
+  }
+  .largeFont {
+    font-size: 20px;
+  }
+  .smallFont {
+    font-size: 14px;
+  }
+}
+
+@media print {
+  body {
+    background: #FFFFFF;
+  }
+  #resume {
+    margin: 0 auto;
+    max-width: 600px;
+    padding: 0px 0px;
+    border: 0px;
+    background: #fff;
+    box-shadow: none;
+    -webkit-box-shadow: none;
+  }
+
+  a {
+    color: black;
+  }
+}
