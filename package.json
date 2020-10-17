@@ -1,0 +1,37 @@
+{
+  "name": "jsonresume-theme-straightforward",
+  "version": "0.0.0-development",
+  "description": "a straightforward jsonresume theme",
+  "homepage": "https://github.com/aegershman/jsonresume-theme-straightforward",
+  "bugs": {
+    "url": "https://github.com/aegershman/jsonresume-theme-straightforward/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/aegershman/jsonresume-theme-straightforward.git"
+  },
+  "license": " GPL-3.0",
+  "author": "Aaron Gershman",
+  "keywords": [
+    "jsonresume",
+    "theme",
+    "straightforward"
+  ],
+  "files": [
+    "index.js",
+    "partials/*.hbs",
+    "resume.hbs",
+    "style.css"
+  ],
+  "scripts": {
+    "test": "npm run lint",
+    "lint": "eslint ."
+  },
+  "dependencies": {
+    "css": "^3.0.0",
+    "handlebars": "^4.7.6"
+  },
+  "devDependencies": {
+    "eslint": "^7.11.0"
+  }
+}

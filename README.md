@@ -1,3 +1,3 @@
 # jsonresume-theme-straightforward
 
-straightforward jsonresume theme
+a straightforward jsonresume theme
