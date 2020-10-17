@@ -25,7 +25,7 @@
   ],
   "scripts": {
     "start": "npm run build; open public/index.html",
-    "build": "node ./bin/build-demo.js",
+    "build": "node ./bin/build-local-html.js",
     "test": "npm run build test:eslint test:pa11y",
     "test:eslint": "eslint .",
     "test:pa11y": "pa11y --reporter=cli $(pwd)/public/index.html >public/pa11y-results.txt"
