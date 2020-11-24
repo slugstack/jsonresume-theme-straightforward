@@ -1,5 +1,6 @@
 {
   "name": "jsonresume-theme-straightforward",
+  "private": true,
   "version": "0.0.0-development",
   "description": "a straightforward jsonresume theme",
   "homepage": "https://github.com/slugstack/jsonresume-theme-straightforward",
