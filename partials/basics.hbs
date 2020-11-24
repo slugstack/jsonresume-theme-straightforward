@@ -6,28 +6,45 @@
 
     <div id='basicsBlock' class='smallFont'>
 
+      <div class='displayNone'>
+        {{!-- note: this is to enable any automated parsing of content --}}
+        {{#location}}
+          <span class='address'>
+            {{address}} {{city}} {{region}} {{postalCode}}
+          </span>
+        {{/location}}
+        {{#if phone}}
+          <span class='phone'>
+            <a href="tel:{{phone}}">{{phone}}</a>
+          </span>
+        {{/if}}
+      </div>
+
       <div class='contactBlock'>
         {{#if email}}
-          <span class='email'>{{email}}</span>
+          <span class='email'>
+            <a href="mailto:{{email}}">{{email}}</a>
+          </span>
         {{/if}}
-        {{#if phone}}
+        {{#if url}}
           <span class='divider'>|</span>
-          <span class='phone'>{{phone}}</span>
+          <span class='url'>
+            <a href='{{url}}'>{{url}}</a>
+          </span>
         {{/if}}
         {{#location}}
           <span class='divider'>|</span>
-          <span class='address'>
-            {{#if city}}{{city}}{{/if}}{{#if region}}, {{region}}{{/if}}
-          </span>
+          <span class='address'>{{city}}, {{STATE_ABBREVIATION_TO_FULL_NAME region}}</span>
         {{/location}}
       </div>
 
       {{#if profiles.length}}
-        <div id='profilesBlock'>
+        {{!-- note: this will be hidden, here to enable any automated parsing of content --}}
+        <div class='profilesBlock'>
           {{#each profiles}}
             {{#if url}}
               <span class='url'>
-                <a href='{{url}}'>{{network}}</a>
+                <a href='{{url}}'>{{url}}</a>
               </span>
               {{#unless @last}}<span class='divider'>|</span>{{/unless}}
             {{/if}}

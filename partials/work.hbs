@@ -17,9 +17,17 @@
               {{#if endDate}}<time datetime="{{endDate}}">{{MONTH_YEAR endDate}}</time>{{else}}Present{{/if}}
             </span>
           </div>
-          {{#if website}}
-            <div class='website'><a href='{{website}}'>{{website}}</a></div>
-          {{/if}}
+
+          <div class='displayNone'>
+            {{!-- note: this is to enable any automated parsing of content --}}
+            {{#if location}}
+              <span class='location'>{{location}}</span>
+            {{/if}}
+            {{#if website}}
+              <span class='website'><a href='{{website}}'>{{website}}</a></span>
+            {{/if}}
+          </div>
+
           {{#if highlights.length}}
             <ul class='highlights'>
               {{#each highlights}}

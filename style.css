@@ -2,11 +2,8 @@ body {
   background: #EEEEEE;
   font-size: 13px;
   font-family: "Times New Roman", Times, sans-serif;
-  line-height: 1.4;
+  line-height: 1.38; /* TODO previously 1.4, but trying to eek out spacing efficiency */
   margin: 40px 0;
-}
-p {
-  line-height: 1.4;
 }
 ul {
   margin-bottom: 0;
@@ -27,6 +24,12 @@ a {
   border: 1px solid #ccc;
   box-shadow: 2px 2px 4px #aaa;
   -webkit-box-shadow: 2px 2px 4px #aaa;
+}
+
+.displayNone,
+.profilesBlock {
+  /* note: this is to enable any automated parsing of content */
+  display: none;
 }
 
 .basics {
@@ -63,7 +66,7 @@ a {
   border-style: hidden;
   border-width: 1px;
   margin-top: 10px;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
 }
 
 .sectionIntroLine {
@@ -71,7 +74,7 @@ a {
   border-style: solid;
   border-width: 1px;
   margin-top: 0px;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
 }
 
 #workBlock .blockHeader,
@@ -109,7 +112,7 @@ a {
 
 .sectionContent ul {
   padding-left: 20px;
-  margin-top: 6px;
+  margin-top: 3px;
   list-style-type: circle;
 }
 
@@ -122,7 +125,7 @@ a {
 }
 
 .sectionContent .separator {
-  height: 14px;
+  height: 7px;
 }
 
 .summary {

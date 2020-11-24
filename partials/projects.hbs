@@ -7,18 +7,23 @@
       <div class='sectionIntroLine'></div>
     </div>
     <div class='sectionContent'>
-      {{#each resume.projects}}
-        <div class='blockHeader'>
-          <span class='title'>{{name}}</span>
-          {{#if highlights.length}}
-            <ul class='highlights'>
+      <ul class='highlights'>
+        {{#each resume.projects}}
+          <li>
+            {{#if url}}
+              <span class='title'><a href="{{url}}">{{name}}</a>: </span>
+            {{else}}
+              <span class='title'>{{name}}: </span>
+            {{/if}}
+            {{#if highlights.length}}
               {{#each highlights}}
-                <li>{{.}}</li>
+                {{!-- formatting is expecting resume.json highlights to not have end punctuation --}}
+                <span>{{.}}</span>.{{#unless @last}} {{/unless}}
               {{/each}}
-            </ul>
-          {{/if}}
-        </div>
-      {{/each}}
+            {{/if}}
+          </li>
+        {{/each}}
+      </ul>
     </div>
   </div>
   <div class='sectionLine'></div>
