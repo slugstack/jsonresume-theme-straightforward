@@ -31,7 +31,6 @@
     "test:pa11y": "pa11y --reporter=cli $(pwd)/public/index.html >public/pa11y-results.txt"
   },
   "dependencies": {
-    "css": "^3.0.0",
     "handlebars": "^4.7.6"
   },
   "devDependencies": {
