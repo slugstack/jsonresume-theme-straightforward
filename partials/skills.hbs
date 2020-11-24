@@ -13,7 +13,7 @@
             <span class='title'>{{name}}:</span>
             {{#if keywords.length}}
               {{#each keywords}}
-                <span>{{.}}</span>{{#unless @last}}, {{/unless}}
+                <span>{{.}}</span>{{#unless @last}}, {{/unless}}{{#if @last}}.{{/if}}
               {{/each}}
             {{/if}}
           </li>

@@ -1,16 +1,17 @@
 {
   "name": "jsonresume-theme-straightforward",
+  "private": true,
   "version": "0.0.0-development",
   "description": "a straightforward jsonresume theme",
-  "homepage": "https://github.com/aegershman/jsonresume-theme-straightforward",
+  "homepage": "https://github.com/slugstack/jsonresume-theme-straightforward",
   "bugs": {
-    "url": "https://github.com/aegershman/jsonresume-theme-straightforward/issues"
+    "url": "https://github.com/slugstack/jsonresume-theme-straightforward/issues"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/aegershman/jsonresume-theme-straightforward.git"
+    "url": "https://github.com/slugstack/jsonresume-theme-straightforward.git"
   },
-  "license": " GPL-3.0",
+  "license": "MIT",
   "author": "Aaron Gershman",
   "keywords": [
     "jsonresume",
@@ -31,7 +32,6 @@
     "test:pa11y": "pa11y --reporter=cli $(pwd)/public/index.html >public/pa11y-results.txt"
   },
   "dependencies": {
-    "css": "^3.0.0",
     "handlebars": "^4.7.6"
   },
   "devDependencies": {
