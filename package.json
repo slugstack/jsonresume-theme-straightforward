@@ -1,7 +1,7 @@
 {
   "name": "jsonresume-theme-straightforward",
   "private": false,
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "a straightforward jsonresume theme",
   "homepage": "https://github.com/slugstack/jsonresume-theme-straightforward",
   "bugs": {
@@ -25,18 +25,26 @@
     "style.css"
   ],
   "scripts": {
-    "start": "npm run build; open public/index.html",
-    "build": "node ./bin/build-local-html.js",
-    "test": "npm run build test:eslint test:pa11y",
-    "test:eslint": "eslint .",
-    "test:pa11y": "pa11y --reporter=cli $(pwd)/public/index.html >public/pa11y-results.txt"
+    "export": "npm run export-html && npm run export-pdf",
+    "export-html": "resume export public/resume.html --format html --theme .",
+    "export-pdf": "resume export public/resume.pdf --format pdf --theme .",
+    "lint": "npm run lint:eslint && npm run lint:pa11y",
+    "lint:eslint": "eslint .",
+    "lint:pa11y": "pa11y --reporter=cli $(pwd)/public/resume.html >public/pa11y-results.txt",
+    "test": "jest"
   },
   "dependencies": {
     "handlebars": "^4.7.6"
   },
   "devDependencies": {
+    "@types/jest": "^27.5.0",
     "eslint": "^8.0.0",
+    "html-validate": "^6.10.0",
+    "jest": "^28.0.3",
     "pa11y": "^6.0.0",
-    "resume-schema": "^1.0.0"
+    "resume-cli": "3.0.7"
+  },
+  "resolutions": {
+    "puppeteer": "^13.4.0"
   }
 }
