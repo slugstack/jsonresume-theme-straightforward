@@ -1,4 +1,5 @@
 # https://github.com/actions/checkout
+# https://github.com/actions/labeler
 # https://github.com/crazy-max/ghaction-github-labeler
 ---
 name: configure-repo-labels
@@ -15,13 +16,11 @@ jobs:
   configure-repo-labels:
     runs-on: ubuntu-latest
     steps:
-      - name: checkout
-        uses: actions/checkout@v3
-      - name: run-labeler
+      - uses: actions/checkout@v3
+      - uses: crazy-max/ghaction-github-labeler@v3.1.1
         if: success()
-        uses: crazy-max/ghaction-github-labeler@v3.1.1
         with:
           dry-run: false
-          github-token: "${{ secrets.GITHUB_TOKEN }}"
+          github-token: ${{ github.token }}
           skip-delete: false
           yaml-file: .github/labels.yml
