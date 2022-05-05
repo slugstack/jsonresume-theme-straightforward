@@ -2,15 +2,19 @@ body {
   background: #EEEEEE;
   font-size: 13px;
   font-family: "Times New Roman", Times, sans-serif;
-  line-height: 1.38; /* TODO previously 1.4, but trying to eek out spacing efficiency */
+  line-height: 1.38;
+  /* TODO previously 1.4, but trying to eek out spacing efficiency */
   margin: 40px 0;
 }
+
 ul {
   margin-bottom: 0;
 }
+
 li {
   margin-bottom: 2px;
 }
+
 a {
   color: black;
   text-decoration: underline;
@@ -78,16 +82,14 @@ a {
 }
 
 #workBlock .blockHeader,
-#volunteer .blockHeader
-{
+#volunteer .blockHeader {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
 #workBlock .blockHeader>*,
-#volunteer .blockHeader>*
-{
+#volunteer .blockHeader>* {
   flex-grow: 1;
   flex-shrink: 1;
   flex-basis: 30%;
@@ -97,10 +99,12 @@ a {
   font-weight: bold;
   text-align: right;
 }
+
 .blockHeader .name {
   font-weight: bold;
   text-align: center;
 }
+
 .blockHeader .title {
   font-weight: bold;
   text-align: left;
@@ -142,27 +146,34 @@ a {
     margin: 0;
     font-size: 14px;
   }
+
   #resume {
     margin: 0 auto;
     max-width: 600px;
     padding: 0.5em 1em;
     border: none;
   }
+
   .sectionBlock {
     flex-direction: column;
   }
+
   .sectionContent {
     width: 100%;
   }
+
   .sectionContent .date {
     padding-right: 2em;
   }
+
   .sectionName {
     width: auto;
   }
+
   .largeFont {
     font-size: 20px;
   }
+
   .smallFont {
     font-size: 14px;
   }
@@ -172,6 +183,7 @@ a {
   body {
     background: #FFFFFF;
   }
+
   #resume {
     margin: 0 auto;
     max-width: 600px;
