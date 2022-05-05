@@ -2439,9 +2439,9 @@ html-escaper@^2.0.0:
   integrity sha512-H2iMtd0I4Mt5eYiapRdIDjp+XzelXQ0tFE4JS7YFwFevXXMmOp9myNrUvCg0D6ws8iqkRPBfKHgbwig1SmlLfg==
 
 html-validate@^6.10.0:
-  version "6.10.0"
-  resolved "https://registry.yarnpkg.com/html-validate/-/html-validate-6.10.0.tgz#66004c5977fcc722aef08ce8ea246358f91e2485"
-  integrity sha512-YFh8hEZgK0eqE8jnL7+yAZUdiiujy0Y51+nlkn4ULMbnsgWvKoWpW108S6Z7RAojTlF8qTmAgN/rOEWJaneEBA==
+  version "6.11.0"
+  resolved "https://registry.yarnpkg.com/html-validate/-/html-validate-6.11.0.tgz#d6721f708d2c154819263c2da4c273bb44b09c93"
+  integrity sha512-SCdYudJzDFodEpPmTlE4SyvZC50o5J4iqJMuXVIT6FWlAselbYd32UUSw+8HIR5winJpJeSHb+4aktxCYw7+LQ==
   dependencies:
     "@babel/code-frame" "^7.10.0"
     "@html-validate/stylish" "^2.0.0"
