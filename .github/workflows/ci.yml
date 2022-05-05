@@ -23,6 +23,6 @@ jobs:
           node-version: ${{ matrix.node }}
           cache: yarn
       - run: yarn install --frozen-lockfile
-      - run: yarn run export-html
+      - run: yarn run export:html
       - run: yarn run lint
       - run: yarn test
