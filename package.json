@@ -26,10 +26,10 @@
   ],
   "scripts": {
     "start": "resume serve --theme .",
-    "export": "yarn run export-html && yarn run export-pdf",
-    "export-html": "resume export public/resume.html --format html --theme .",
-    "export-pdf": "resume export public/resume.pdf --format pdf --theme .",
-    "lint": "yarn run lint:eslint && yarn run lint:pa11y",
+    "export": "npm-run-all export:*",
+    "export:html": "resume export public/resume.html --format html --theme .",
+    "export:pdf": "resume export public/resume.pdf --format pdf --theme .",
+    "lint": "npm-run-all lint:*",
     "lint:eslint": "eslint .",
     "lint:pa11y": "pa11y --reporter=cli $(pwd)/public/resume.html >public/pa11y-results.txt",
     "test": "jest"
@@ -42,6 +42,7 @@
     "eslint": "^8.0.0",
     "html-validate": "^6.10.0",
     "jest": "^28.0.3",
+    "npm-run-all": "^4.1.5",
     "pa11y": "^6.0.0",
     "resume-cli": "3.0.7"
   },

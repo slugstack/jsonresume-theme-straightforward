@@ -19,8 +19,5 @@ resume export resume.html --format html --theme jsonresume-theme-straightforward
 
 ```sh
 yarn install
-
-npm run export-html
-
-open public/resume.html
+yarn start
 ```
