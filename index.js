@@ -15,10 +15,10 @@ fs.readdirSync(partialsDir)
     Handlebars.registerPartial(path.basename(filename, extname), template),
   )
 
-Handlebars.registerHelper('STRIP_PROTOCOL', urlStr => {
-  const result = urlStr.replace(/(^\w+:|^)\/\//, '');
-  return result;
-})
+// Handlebars.registerHelper('STRIP_PROTOCOL', urlStr => {
+//   const result = urlStr.replace(/(^\w+:|^)\/\//, '');
+//   return result;
+// })
 
 Handlebars.registerHelper('MONTH_YEAR', dateString =>
   // https://dockyard.com/blog/2020/02/14/you-probably-don-t-need-moment-js-anymore

@@ -29,7 +29,8 @@
         {{#if url}}
           <span class='divider'>|</span>
           <span class='url'>
-            <a href='{{url}}'>{{STRIP_PROTOCOL url}}</a>
+            {{!-- <a href='{{url}}'>{{STRIP_PROTOCOL url}}</a> --}}
+            <a href='{{url}}'>{{url}}</a>
           </span>
         {{/if}}
         {{#location}}
