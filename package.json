@@ -38,7 +38,7 @@
     "handlebars": "^4.7.6"
   },
   "devDependencies": {
-    "@types/jest": "^27.5.0",
+    "@types/jest": "^28.1.0",
     "eslint": "^8.0.0",
     "html-validate": "^7.0.0",
     "jest": "^28.0.3",
