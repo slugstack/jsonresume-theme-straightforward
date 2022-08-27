@@ -9,8 +9,8 @@
     <div class='sectionContent'>
       {{#each resume.volunteer}}
         <div class='blockHeader'>
+          <span class='organization'>{{organization}}</span>
           <span class='title'>{{position}}</span>
-          <span class='name'>{{organization}}</span>
           {{#if startDate}}
             <span class='date'>
               {{#if (IF_DATES_HAVE_SAME_MONTH_AND_YEAR startDate endDate)}}

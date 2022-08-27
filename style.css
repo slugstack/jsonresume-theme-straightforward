@@ -100,14 +100,14 @@ a {
   text-align: right;
 }
 
-.blockHeader .name {
+.blockHeader .organization {
   font-weight: bold;
-  text-align: center;
+  text-align: left;
 }
 
 .blockHeader .title {
   font-weight: bold;
-  text-align: left;
+  text-align: center;
 }
 
 .sectionContent {
