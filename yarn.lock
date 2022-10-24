@@ -4234,7 +4234,7 @@ punycode@^2.1.0:
   resolved "https://registry.yarnpkg.com/punycode/-/punycode-2.1.1.tgz#b58b010ac40c22c5657616c8d2c2c02c7bf479ec"
   integrity sha512-XRsRjdf+j5ml+y/6GKHPZbrF/8p2Yga0JPtdqTIY2Xe5ohJPD9saDJJLPvp9+NSBprVvevdXZybnj2cv8OEd0A==
 
-puppeteer@^13.4.0, puppeteer@^5.2.1, puppeteer@~9.1.1:
+puppeteer@^13.4.0, puppeteer@^16.1.0, puppeteer@~9.1.1:
   version "13.7.0"
   resolved "https://registry.yarnpkg.com/puppeteer/-/puppeteer-13.7.0.tgz#18e16f83e397cf02f7a0804c67c1603d381cfb0b"
   integrity sha512-U1uufzBjz3+PkpCxFrWzh4OrMIdIb2ztzCu0YEPfRHjHswcSwHZswnK+WdsOQJsRV8WeTg3jLhJR4D867+fjsA==
@@ -4420,10 +4420,10 @@ resp-modifier@6.0.2:
     debug "^2.2.0"
     minimatch "^3.0.2"
 
-resume-cli@3.0.7:
-  version "3.0.7"
-  resolved "https://registry.yarnpkg.com/resume-cli/-/resume-cli-3.0.7.tgz#fcf149a3755e7db69f6dc586373b55a76b7b39d2"
-  integrity sha512-9uGpPbVRlk+L0y/uIekHqwRGxs7+VGMnWvPGn8G8mpJgaOw6oIfYqtghB8FTjgfo2qrwlq7JQ3uVuGS+nPVG+g==
+resume-cli@3.0.8:
+  version "3.0.8"
+  resolved "https://registry.yarnpkg.com/resume-cli/-/resume-cli-3.0.8.tgz#c03b4d48d4080e0619282c38f56e1b07a9b03597"
+  integrity sha512-4DbyhLQTx/f2S83UN7KJsRSv4cBRfHjGGImAY+LBNKoDTePg1Tq+v5ZRoxpQrXHoEpQdd//BykduIs/yb1jMvQ==
   dependencies:
     async "^3.2.0"
     browser-sync "^2.26.7"
@@ -4437,7 +4437,7 @@ resume-cli@3.0.7:
     jsonresume-theme-even "^0.6.0"
     mime-types "^2.1.27"
     object-path-immutable "^4.1.1"
-    puppeteer "^5.2.1"
+    puppeteer "^16.1.0"
     quaff "^4.2.0"
     read "^1.0.7"
     resume-schema "^1.0.0"
