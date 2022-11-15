@@ -18,6 +18,6 @@ resume export resume.html --format html --theme jsonresume-theme-straightforward
 ## building local
 
 ```sh
-yarn install
-yarn start
+npm install
+npm start
 ```
