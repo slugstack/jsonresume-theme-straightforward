@@ -44,7 +44,7 @@ jobs:
       - name: publish-release
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPMJS_ACCESS_TOKEN }}
-        run: yarn publish --verbose --access public --tag latest
+        run: npm publish --access=public --tag=latest
 
       - name: push-changes-back-to-repository
         env:
