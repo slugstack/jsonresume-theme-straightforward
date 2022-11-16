@@ -22,7 +22,8 @@ fs.readdirSync(partialsDir)
 
 Handlebars.registerHelper('MONTH_YEAR', dateString =>
   // https://dockyard.com/blog/2020/02/14/you-probably-don-t-need-moment-js-anymore
-  new Date(dateString).toLocaleDateString('en', {
+  // https://stackoverflow.com/questions/5619202/parsing-a-string-to-a-date-in-javascript
+  new Date(dateString + "T00:00:00").toLocaleDateString('en', {
     month: 'short',
     year: 'numeric',
   })

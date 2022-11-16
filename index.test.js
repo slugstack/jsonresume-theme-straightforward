@@ -31,7 +31,7 @@ describe('Handlebars Tests', () => {
       var template = Handlebars.compile(this.html);
       this.fields['date'] = "2013-12-01";
       var result = template(this.fields);
-      expect(result).toEqual("Nov 2013");
+      expect(result).toEqual("Dec 2013");
     })
 
   })
