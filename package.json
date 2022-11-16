@@ -32,7 +32,7 @@
     "lint": "npm-run-all lint:*",
     "lint:eslint": "eslint .",
     "lint:pa11y": "pa11y --reporter=cli $(pwd)/docs/index.html",
-    "test": "jest; npm run export:html; npm run lint"
+    "test": "jest && npm run export:html && npm run lint"
   },
   "dependencies": {
     "handlebars": "^4.7.6"
