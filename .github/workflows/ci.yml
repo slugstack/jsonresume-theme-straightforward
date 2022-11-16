@@ -22,6 +22,6 @@ jobs:
           node-version: 16
           cache: npm
       - run: npm ci
-      - run: npm run export:html
+      - run: npm run pre-commit-check
       - run: npm run lint
       - run: npm test
