@@ -21,9 +21,9 @@ resume export resume.html --format html --theme jsonresume-theme-straightforward
 ```sh
 npm install
 npm start
-npm run export:html
-npm run lint
 npm test
+
+npm run export:html
 ```
 
-Note that running `export:pdf` will result in a different binary every time it's run, even if the source hasn't changed. So it's not the most reliable indicator of differences.
+Note that running `npm run export:pdf` will result in a different binary every time it's run, even if the source hasn't changed. So it's not the most reliable indicator of differences.
