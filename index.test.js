@@ -1,7 +1,7 @@
 const { HtmlValidate } = require('html-validate')
 
-const index = require('../index')
-const resume = require('../resume.json')
+const index = require('./index')
+const resume = require('./resume.json')
 
 describe.skip('render function', () => {
   test('given no parameter then throw TypeError', () => {
