@@ -4,7 +4,8 @@ a straightforward [jsonresume](https://github.com/jsonresume) theme
 
 ## examples
 
-- [simple example](docs/resume-example.pdf)
+- [as HTML (https://slugstack.github.io/jsonresume-theme-straightforward)](https://slugstack.github.io/jsonresume-theme-straightforward)
+- [as PDF (docs/index.pdf)](docs/index.pdf)
 
 ## usage
 
@@ -20,4 +21,5 @@ resume export resume.html --format html --theme jsonresume-theme-straightforward
 ```sh
 npm install
 npm start
+npm run export
 ```
