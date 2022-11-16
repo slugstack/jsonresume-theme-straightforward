@@ -23,7 +23,7 @@ fs.readdirSync(partialsDir)
 Handlebars.registerHelper('MONTH_YEAR', dateString =>
   // https://dockyard.com/blog/2020/02/14/you-probably-don-t-need-moment-js-anymore
   // https://stackoverflow.com/questions/5619202/parsing-a-string-to-a-date-in-javascript
-  new Date(dateString + "T00:00:00").toLocaleDateString('en', {
+  new Date(dateString + "T00:00:00").toLocaleDateString('en-US', {
     month: 'short',
     year: 'numeric',
   })
@@ -32,8 +32,10 @@ Handlebars.registerHelper('MONTH_YEAR', dateString =>
 Handlebars.registerHelper('IF_DATES_HAVE_SAME_MONTH_AND_YEAR', function (arg1, arg2) {
   // prevents situation where we render same month/date combination
   // such as "Sept. 2020 - Sept. 2020"
-  const matchingYear = new Date(arg1).getFullYear() == new Date(arg2).getFullYear()
-  const matchingMonth = new Date(arg1).getMonth() == new Date(arg2).getMonth()
+  const d1 = new Date(arg1 + "T00:00:00")
+  const d2 = new Date(arg2 + "T00:00:00")
+  const matchingYear = d1.getFullYear() == d2.getFullYear()
+  const matchingMonth = d1.getMonth() == d2.getMonth()
   return (matchingYear && matchingMonth)
 });
 
