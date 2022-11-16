@@ -27,11 +27,11 @@
   "scripts": {
     "start": "resume serve --theme .",
     "export": "npm-run-all export:*",
-    "export:html": "resume export public/resume.html --format html --theme .",
-    "export:pdf": "resume export public/resume.pdf --format pdf --theme .",
+    "export:html": "resume export docs/index.html --format html --theme .",
+    "export:pdf": "resume export docs/index.pdf --format pdf --theme .",
     "lint": "npm-run-all lint:*",
     "lint:eslint": "eslint .",
-    "lint:pa11y": "pa11y --reporter=cli $(pwd)/public/resume.html >public/pa11y-results.txt",
+    "lint:pa11y": "pa11y --reporter=cli $(pwd)/docs/index.html",
     "test": "jest"
   },
   "dependencies": {

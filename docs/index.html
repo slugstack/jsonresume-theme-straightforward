@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset='utf-8'>
+  <title>Richard Hendriks</title>
+  <meta name='viewport' content='width=device-width, user-scalable=no, minimal-ui'>
+  <meta name='resume-version' content='v1.0.0'>
+  <style>body {
+  background: #EEEEEE;
+  font-size: 13px;
+  font-family: "Times New Roman", Times, sans-serif;
+  line-height: 1.38;
+  /* TODO previously 1.4, but trying to eek out spacing efficiency */
+  margin: 40px 0;
+}
+
+ul {
+  margin-bottom: 0;
+}
+
+li {
+  margin-bottom: 2px;
+}
+
+a {
+  color: black;
+  text-decoration: underline;
+}
+
+#resume {
+  margin: 0 auto;
+  max-width: 600px;
+  padding: 40px 50px;
+  background: #fff;
+  border: 1px solid #ccc;
+  box-shadow: 2px 2px 4px #aaa;
+  -webkit-box-shadow: 2px 2px 4px #aaa;
+}
+
+.displayNone,
+.profilesBlock {
+  /* note: this is to enable any automated parsing of content */
+  display: none;
+}
+
+.basics {
+  text-align: center;
+}
+
+.basics .divider {
+  font-weight: bold;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.largeFont {
+  font-size: 20px;
+}
+
+.smallFont {
+  font-size: 13px;
+}
+
+.sectionBlock {
+  display: block;
+  width: 100%;
+}
+
+.sectionName {
+  color: #004687;
+  display: block;
+  font-weight: bold;
+}
+
+.sectionLine {
+  border-color: none;
+  border-style: hidden;
+  border-width: 1px;
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+.sectionIntroLine {
+  border-color: #004687;
+  border-style: solid;
+  border-width: 1px;
+  margin-top: 0px;
+  margin-bottom: 5px;
+}
+
+#workBlock .blockHeader,
+#volunteer .blockHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#workBlock .blockHeader>*,
+#volunteer .blockHeader>* {
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 30%;
+}
+
+.blockHeader .date {
+  font-weight: bold;
+  text-align: right;
+}
+
+.blockHeader .organization {
+  font-weight: bold;
+  text-align: left;
+}
+
+.blockHeader .title {
+  font-weight: bold;
+  text-align: center;
+}
+
+.sectionContent {
+  display: block;
+}
+
+.sectionContent ul {
+  padding-left: 20px;
+  margin-top: 3px;
+  list-style-type: circle;
+}
+
+.sectionContent .title {
+  font-weight: bold;
+}
+
+.sectionContent .date {
+  float: right;
+}
+
+.sectionContent .separator {
+  height: 7px;
+}
+
+.summary {
+  margin-top: 6px;
+}
+
+.jobBlock {
+  page-break-inside: avoid;
+}
+
+/* Media Queries */
+@media only screen and (max-width: 40em) {
+  body {
+    margin: 0;
+    font-size: 14px;
+  }
+
+  #resume {
+    margin: 0 auto;
+    max-width: 600px;
+    padding: 0.5em 1em;
+    border: none;
+  }
+
+  .sectionBlock {
+    flex-direction: column;
+  }
+
+  .sectionContent {
+    width: 100%;
+  }
+
+  .sectionContent .date {
+    padding-right: 2em;
+  }
+
+  .sectionName {
+    width: auto;
+  }
+
+  .largeFont {
+    font-size: 20px;
+  }
+
+  .smallFont {
+    font-size: 14px;
+  }
+}
+
+@media print {
+  body {
+    background: #FFFFFF;
+  }
+
+  #resume {
+    margin: 0 auto;
+    max-width: 600px;
+    padding: 0px 0px;
+    border: 0px;
+    background: #fff;
+    box-shadow: none;
+    -webkit-box-shadow: none;
+  }
+
+  a {
+    color: black;
+  }
+}
+</style>
+</head>
+
+<body>
+  <div id='resume'>
+      <div class='basics'>
+        <div id='nameBlock' class='largeFont'>
+          <span class='name'>Richard Hendriks</span>
+        </div>
+    
+        <div id='basicsBlock' class='smallFont'>
+    
+          <div class='displayNone'>
+              <span class='address'>
+                2712 Broadway St San Francisco California CA 94115
+              </span>
+              <span class='phone'>
+                <a href="tel:(912) 555-4321">(912) 555-4321</a>
+              </span>
+          </div>
+    
+          <div class='contactBlock'>
+              <span class='email'>
+                <a href="mailto:richard.hendriks@mail.com">richard.hendriks@mail.com</a>
+              </span>
+              <span class='divider'>|</span>
+              <span class='url'>
+                <a href='http://richardhendricks.example.com'>http://richardhendricks.example.com</a>
+              </span>
+              <span class='divider'>|</span>
+              <span class='address'>San Francisco, California</span>
+          </div>
+    
+            <div class='profilesBlock'>
+                  <span class='url'>
+                    <a href='https://soundcloud.example.com/dandymusicnl'>https://soundcloud.example.com/dandymusicnl</a>
+                  </span>
+                  
+            </div>
+    
+        </div>
+    
+        <div class='sectionLine'></div>
+    
+      </div>
+      <div id='summaryBlock' class='sectionBlock'>
+        <div class='sectionIntro'>
+          <div class='sectionName'>
+            <span>SUMMARY</span>
+          </div>
+          <div class='sectionIntroLine'></div>
+        </div>
+        <div class='sectionContent'>
+          <span>Richard hails from Tulsa. He has earned degrees from the University of Oklahoma and Stanford. (Go Sooners and Cardinal!) Before starting Pied Piper, he worked for Hooli as a part time software developer. While his work focuses on applied information theory, mostly optimizing lossless compression schema of both the length-limited and adaptive variants, his non-work interests range widely, everything from quantum computing to chaos theory. He could tell you about it, but THAT would NOT be a “length-limited” conversation!</span>
+        </div>
+      </div>
+      <div class='sectionLine'></div>
+      <div id='skills' class='sectionBlock'>
+        <div class='sectionIntro'>
+          <div class='sectionName'>
+            <span>SKILLS AND TECH</span>
+          </div>
+          <div class='sectionIntroLine'></div>
+        </div>
+        <div class='sectionContent'>
+          <ul class='highlights'>
+              <li>
+                <span class='title'>Web Development:</span>
+                    <span>HTML</span>, 
+                    <span>CSS</span>, 
+                    <span>Javascript</span>.
+              </li>
+              <li>
+                <span class='title'>Compression:</span>
+                    <span>Mpeg</span>, 
+                    <span>MP4</span>, 
+                    <span>GIF</span>.
+              </li>
+          </ul>
+        </div>
+      </div>
+      <div class='sectionLine'></div>
+      <div id='workBlock' class='sectionBlock'>
+        <div class='sectionIntro'>
+          <div class='sectionName'>
+            <span>EXPERIENCE</span>
+          </div>
+          <div class='sectionIntroLine'></div>
+        </div>
+        <div class='sectionContent'>
+            <div class='jobBlock'>
+              <div class='blockHeader'>
+                <span class='organization'>Pied Piper</span>
+                <span class='title'>CEO/President</span>
+                <span class='date'>
+                  <time datetime="2013-12-01">Nov 2013</time> &mdash;
+                  <time datetime="2014-12-01">Nov 2014</time>
+                </span>
+              </div>
+    
+              <div class='displayNone'>
+                  <span class='location'>Palo Alto, CA</span>
+              </div>
+    
+                <ul class='highlights'>
+                    <li>Build an algorithm for artist to detect if their music was violating copy right infringement laws</li>
+                    <li>Successfully won Techcrunch Disrupt</li>
+                    <li>Optimized an algorithm that holds the current world record for Weisman Scores</li>
+                </ul>
+            </div>
+        </div>
+      </div>
+      <div class='sectionLine'></div>
+      <div id='volunteer' class='sectionBlock'>
+        <div class='sectionIntro'>
+          <div class='sectionName'>
+            <span>VOLUNTEERING</span>
+          </div>
+          <div class='sectionIntroLine'></div>
+        </div>
+        <div class='sectionContent'>
+            <div class='blockHeader'>
+              <span class='organization'>CoderDojo</span>
+              <span class='title'>Teacher</span>
+                <span class='date'>
+                    Dec 2011 &mdash;
+                    Dec 2012
+                </span>
+            </div>
+              <ul class='highlights'>
+                  <li>Awarded &#x27;Teacher of the Month&#x27;</li>
+              </ul>
+        </div>
+      </div>
+      <div class='sectionLine'></div>
+      <div id='projects' class='sectionBlock'>
+        <div class='sectionIntro'>
+          <div class='sectionName'>
+            <span>PROJECTS</span>
+          </div>
+          <div class='sectionIntroLine'></div>
+        </div>
+        <div class='sectionContent'>
+          <ul class='highlights'>
+              <li>
+                  <span class='title'><a href="missdirection.example.com">Miss Direction</a>: </span>
+                    <span>Won award at AIHacks 2016</span>. 
+                    <span>Built by all women team of newbie programmers</span>. 
+                    <span>Using modern technologies such as GoogleMaps, Chrome Extension and Javascript</span>.
+              </li>
+          </ul>
+        </div>
+      </div>
+      <div class='sectionLine'></div>
+      <div id='education' class='sectionBlock'>
+        <div class='sectionIntro'>
+          <div class='sectionName'>
+            <span>EDUCATION</span>
+          </div>
+          <div class='sectionIntroLine'></div>
+        </div>
+        <div class='sectionContent'>
+            <div class='blockHeader'>
+              <span class='title'>University of Oklahoma</span>
+                <span class='date'>
+                  May 2011 &mdash;
+                  Dec 2013
+                </span>
+              <div class=''>
+                Bachelor  - Information Technology, GPA: 4.0
+              </div>
+            </div>
+        </div>
+      </div>
+      <div class='sectionLine'></div>
+      <div id='publications' class='sectionBlock'>
+        <div class='sectionIntro'>
+          <div class='sectionName'>
+            <span>PUBLICATIONS</span>
+          </div>
+          <div class='sectionIntroLine'></div>
+        </div>
+        <div class='sectionContent'>
+            <div class='blockHeader'>
+              <span class='title'>Video compression for 3d media</span>
+                <span class='date'>
+                  <time datetime="2014-10-01">Sep 2014</time>
+                </span>
+            </div>
+        </div>
+      </div>
+      <div class='sectionLine'></div>
+      <div id='awards' class='sectionBlock'>
+        <div class='sectionIntro'>
+          <div class='sectionName'>
+            <span>AWARDS</span>
+          </div>
+          <div class='sectionIntroLine'></div>
+        </div>
+        <div class='sectionContent'>
+            <div class='blockHeader'>
+              <span class='title'>Digital Compression Pioneer Award, Techcrunch</span>
+                <span class='date'>
+                  <time datetime="2014-11-01">Oct 2014</time>
+                </span>
+            </div>
+        </div>
+      </div>
+      <div class='sectionLine'></div>
+      <div id='interests' class='sectionBlock'>
+        <div class='sectionIntro'>
+          <div class='sectionName'>
+            <span>INTERESTS</span>
+          </div>
+          <div class='sectionIntroLine'></div>
+        </div>
+        <div class='sectionContent'>
+          <ul class='highlights'>
+              <li>
+                <span class='title'>Wildlife:</span>
+                    <span>Ferrets</span>, 
+                    <span>Unicorns</span>
+              </li>
+          </ul>
+        </div>
+        <div class='sectionLine'></div>
+      </div>
+  </div>
+</body>
+
+</html>
