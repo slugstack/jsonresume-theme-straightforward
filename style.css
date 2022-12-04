@@ -28,8 +28,6 @@ a {
   padding: 40px 50px;
   background: #fff;
   border: 1px solid #ccc;
-  box-shadow: 2px 2px 4px #aaa;
-  -webkit-box-shadow: 2px 2px 4px #aaa;
 }
 
 .displayNone,
@@ -192,8 +190,6 @@ a {
     padding: 0px 0px;
     border: 0px;
     background: #fff;
-    box-shadow: none;
-    -webkit-box-shadow: none;
   }
 
   a {
