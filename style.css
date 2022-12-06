@@ -38,14 +38,31 @@ a {
   text-decoration: none;
 }
 
-.displayNone,
-.profilesBlock {
+.display-none {
   /* note: this is to enable any automated parsing of content */
   display: none;
 }
 
 .basics {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.basics>* {
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 30%;
+}
+
+#basics-center-content {
   text-align: center;
+  font-size: 30px;
+}
+
+#basics-right-content {
+  text-align: right;
+  font-size: 13px;
 }
 
 .basics .divider {
@@ -54,26 +71,18 @@ a {
   margin-right: 5px;
 }
 
-.largeFont {
-  font-size: 20px;
-}
-
-.smallFont {
-  font-size: 13px;
-}
-
-.sectionBlock {
+.section-block {
   display: block;
   width: 100%;
 }
 
-.sectionName {
+.section-name {
   color: #004687;
   display: block;
   font-weight: bold;
 }
 
-.sectionLine {
+.section-line {
   border-color: none;
   border-style: hidden;
   border-width: 1px;
@@ -81,7 +90,7 @@ a {
   margin-bottom: 5px;
 }
 
-.sectionIntroLine {
+.section-intro-line {
   border-color: #004687;
   border-style: solid;
   border-width: 1px;
@@ -89,54 +98,54 @@ a {
   margin-bottom: 5px;
 }
 
-#workBlock .blockHeader,
-#volunteer .blockHeader {
+#work-block .block-header,
+#volunteer .block-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-#workBlock .blockHeader>*,
-#volunteer .blockHeader>* {
+#work-block .block-header>*,
+#volunteer .block-header>* {
   flex-grow: 1;
   flex-shrink: 1;
   flex-basis: 30%;
 }
 
-.blockHeader .date {
+.block-header .date {
   font-weight: bold;
   text-align: right;
 }
 
-.blockHeader .organization {
+.block-header .organization {
   font-weight: bold;
   text-align: left;
 }
 
-.blockHeader .title {
+.block-header .title {
   font-weight: bold;
   text-align: center;
 }
 
-.sectionContent {
+.section-content {
   display: block;
 }
 
-.sectionContent ul {
+.section-content ul {
   padding-left: 20px;
   margin-top: 3px;
   list-style-type: circle;
 }
 
-.sectionContent .title {
+.section-content .title {
   font-weight: bold;
 }
 
-.sectionContent .date {
+.section-content .date {
   float: right;
 }
 
-.sectionContent .separator {
+.section-content .separator {
   height: 7px;
 }
 
@@ -144,6 +153,6 @@ a {
   margin-top: 6px;
 }
 
-.jobBlock {
+.job-block {
   page-break-inside: avoid;
 }

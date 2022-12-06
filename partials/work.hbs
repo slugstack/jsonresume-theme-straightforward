@@ -1,15 +1,15 @@
 {{#if resume.work.length}}
-  <div id='workBlock' class='sectionBlock'>
-    <div class='sectionIntro'>
-      <div class='sectionName'>
+  <div id='work-block' class='section-block'>
+    <div class='section-intro'>
+      <div class='section-name'>
         <span>EXPERIENCE</span>
       </div>
-      <div class='sectionIntroLine'></div>
+      <div class='section-intro-line'></div>
     </div>
-    <div class='sectionContent'>
+    <div class='section-content'>
       {{#each resume.work}}
-        <div class='jobBlock'>
-          <div class='blockHeader'>
+        <div class='job-block'>
+          <div class='block-header'>
             <span class='organization'>{{name}}</span>
             <span class='title'>{{position}}</span>
             <span class='date'>
@@ -18,7 +18,7 @@
             </span>
           </div>
 
-          <div class='displayNone'>
+          <div class='display-none'>
             {{!-- note: this is to enable any automated parsing of content --}}
             {{#if location}}
               <span class='location'>{{location}}</span>
@@ -42,5 +42,5 @@
       {{/each}}
     </div>
   </div>
-  <div class='sectionLine'></div>
+  <div class='section-line'></div>
 {{/if}}

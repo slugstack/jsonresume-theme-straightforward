@@ -1,13 +1,8 @@
 {{#resume.basics}}
   <div class='basics'>
-    <div id='nameBlock' class='largeFont'>
-      <span class='name'>{{name}}</span>
-    </div>
-
-    <div id='basicsBlock' class='smallFont'>
-
-      <div class='displayNone'>
-        {{!-- note: this is to enable any automated parsing of content --}}
+    <div id='basics-left-content'>
+      {{!-- note: this content should not appear or have any effect on styling, this is only to enable any automated content parsing --}}
+      <div class='display-none'>
         {{#location}}
           <span class='address'>
             {{address}} {{city}} {{region}} {{postalCode}}
@@ -19,29 +14,38 @@
           </span>
         {{/if}}
       </div>
+    </div>
 
-      <div class='contactBlock'>
+    <div id='basics-center-content'>
+      <span class='name'>{{name}}</span>
+    </div>
+
+    <div id='basics-right-content'>
+      <div class='contact-block'>
         {{#if email}}
-          <span class='email'>
-            <a href="mailto:{{email}}">{{email}}</a>
-          </span>
+          <div>
+            <span class='email'>
+              <a href="mailto:{{email}}">{{email}}</a>
+            </span>
+          </div>
         {{/if}}
         {{#if url}}
-          <span class='divider'>|</span>
-          <span class='url'>
-            {{!-- <a href='{{url}}'>{{STRIP_PROTOCOL url}}</a> --}}
-            <a href='{{url}}'>{{url}}</a>
-          </span>
+          <div>
+            <span class='url'>
+              <a href='{{url}}'>{{url}}</a>
+            </span>
+          </div>
         {{/if}}
         {{#location}}
-          <span class='divider'>|</span>
-          <span class='address'>{{city}}, {{STATE_ABBREVIATION_TO_FULL_NAME region}}</span>
+          <div>
+            <span class='address'>{{city}}, {{STATE_ABBREVIATION_TO_FULL_NAME region}}</span>
+          </div>
         {{/location}}
       </div>
 
       {{#if profiles.length}}
         {{!-- note: this will be hidden, here to enable any automated parsing of content --}}
-        <div class='profilesBlock'>
+        <div class='display-none'>
           {{#each profiles}}
             {{#if url}}
               <span class='url'>
@@ -54,8 +58,6 @@
       {{/if}}
 
     </div>
-
-    <div class='sectionLine'></div>
-
   </div>
+
 {{/resume.basics}}

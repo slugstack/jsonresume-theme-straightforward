@@ -1,14 +1,14 @@
 {{#if resume.publications.length}}
-  <div id='publications' class='sectionBlock'>
-    <div class='sectionIntro'>
-      <div class='sectionName'>
+  <div id='publications' class='section-block'>
+    <div class='section-intro'>
+      <div class='section-name'>
         <span>PUBLICATIONS</span>
       </div>
-      <div class='sectionIntroLine'></div>
+      <div class='section-intro-line'></div>
     </div>
-    <div class='sectionContent'>
+    <div class='section-content'>
       {{#each resume.publications}}
-        <div class='blockHeader'>
+        <div class='block-header'>
           <span class='title'>{{name}}</span>
           {{#if releaseDate}}
             <span class='date'>
@@ -32,5 +32,5 @@
       {{/each}}
     </div>
   </div>
-  <div class='sectionLine'></div>
+  <div class='section-line'></div>
 {{/if}}
