@@ -1,14 +1,14 @@
 {{#if resume.volunteer.length}}
-  <div id='volunteer' class='sectionBlock'>
-    <div class='sectionIntro'>
-      <div class='sectionName'>
+  <div id='volunteer' class='section-block'>
+    <div class='section-intro'>
+      <div class='section-name'>
         <span>VOLUNTEERING</span>
       </div>
-      <div class='sectionIntroLine'></div>
+      <div class='section-intro-line'></div>
     </div>
-    <div class='sectionContent'>
+    <div class='section-content'>
       {{#each resume.volunteer}}
-        <div class='blockHeader'>
+        <div class='block-header'>
           <span class='organization'>{{organization}}</span>
           <span class='title'>{{position}}</span>
           {{#if startDate}}
@@ -38,5 +38,5 @@
       {{/each}}
     </div>
   </div>
-  <div class='sectionLine'></div>
+  <div class='section-line'></div>
 {{/if}}

@@ -47,14 +47,31 @@ a {
   text-decoration: none;
 }
 
-.displayNone,
-.profilesBlock {
+.display-none {
   /* note: this is to enable any automated parsing of content */
   display: none;
 }
 
 .basics {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.basics>* {
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 30%;
+}
+
+#basics-center-content {
   text-align: center;
+  font-size: 30px;
+}
+
+#basics-right-content {
+  text-align: right;
+  font-size: 13px;
 }
 
 .basics .divider {
@@ -63,26 +80,18 @@ a {
   margin-right: 5px;
 }
 
-.largeFont {
-  font-size: 20px;
-}
-
-.smallFont {
-  font-size: 13px;
-}
-
-.sectionBlock {
+.section-block {
   display: block;
   width: 100%;
 }
 
-.sectionName {
+.section-name {
   color: #004687;
   display: block;
   font-weight: bold;
 }
 
-.sectionLine {
+.section-line {
   border-color: none;
   border-style: hidden;
   border-width: 1px;
@@ -90,7 +99,7 @@ a {
   margin-bottom: 5px;
 }
 
-.sectionIntroLine {
+.section-intro-line {
   border-color: #004687;
   border-style: solid;
   border-width: 1px;
@@ -98,54 +107,54 @@ a {
   margin-bottom: 5px;
 }
 
-#workBlock .blockHeader,
-#volunteer .blockHeader {
+#work-block .block-header,
+#volunteer .block-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-#workBlock .blockHeader>*,
-#volunteer .blockHeader>* {
+#work-block .block-header>*,
+#volunteer .block-header>* {
   flex-grow: 1;
   flex-shrink: 1;
   flex-basis: 30%;
 }
 
-.blockHeader .date {
+.block-header .date {
   font-weight: bold;
   text-align: right;
 }
 
-.blockHeader .organization {
+.block-header .organization {
   font-weight: bold;
   text-align: left;
 }
 
-.blockHeader .title {
+.block-header .title {
   font-weight: bold;
   text-align: center;
 }
 
-.sectionContent {
+.section-content {
   display: block;
 }
 
-.sectionContent ul {
+.section-content ul {
   padding-left: 20px;
   margin-top: 3px;
   list-style-type: circle;
 }
 
-.sectionContent .title {
+.section-content .title {
   font-weight: bold;
 }
 
-.sectionContent .date {
+.section-content .date {
   float: right;
 }
 
-.sectionContent .separator {
+.section-content .separator {
   height: 7px;
 }
 
@@ -153,7 +162,7 @@ a {
   margin-top: 6px;
 }
 
-.jobBlock {
+.job-block {
   page-break-inside: avoid;
 }
 </style>
@@ -163,13 +172,8 @@ a {
   <div id='wrapper'>
     <div id='resume'>
         <div class='basics'>
-          <div id='nameBlock' class='largeFont'>
-            <span class='name'>Richard Hendriks</span>
-          </div>
-      
-          <div id='basicsBlock' class='smallFont'>
-      
-            <div class='displayNone'>
+          <div id='basics-left-content'>
+            <div class='display-none'>
                 <span class='address'>
                   2712 Broadway St San Francisco California CA 94115
                 </span>
@@ -177,20 +181,30 @@ a {
                   <a href="tel:(912) 555-4321">(912) 555-4321</a>
                 </span>
             </div>
+          </div>
       
-            <div class='contactBlock'>
-                <span class='email'>
-                  <a href="mailto:richard.hendriks@mail.com">richard.hendriks@mail.com</a>
-                </span>
-                <span class='divider'>|</span>
-                <span class='url'>
-                  <a href='http://richardhendricks.example.com'>http://richardhendricks.example.com</a>
-                </span>
-                <span class='divider'>|</span>
-                <span class='address'>San Francisco, California</span>
+          <div id='basics-center-content'>
+            <span class='name'>Richard Hendriks</span>
+          </div>
+      
+          <div id='basics-right-content'>
+            <div class='contact-block'>
+                <div>
+                  <span class='email'>
+                    <a href="mailto:richard.hendriks@mail.com">richard.hendriks@mail.com</a>
+                  </span>
+                </div>
+                <div>
+                  <span class='url'>
+                    <a href='http://richardhendricks.example.com'>http://richardhendricks.example.com</a>
+                  </span>
+                </div>
+                <div>
+                  <span class='address'>San Francisco, California</span>
+                </div>
             </div>
       
-              <div class='profilesBlock'>
+              <div class='display-none'>
                     <span class='url'>
                       <a href='https://soundcloud.example.com/dandymusicnl'>https://soundcloud.example.com/dandymusicnl</a>
                     </span>
@@ -198,30 +212,28 @@ a {
               </div>
       
           </div>
-      
-          <div class='sectionLine'></div>
-      
         </div>
-        <div id='summaryBlock' class='sectionBlock'>
-          <div class='sectionIntro'>
-            <div class='sectionName'>
+      
+        <div id='summary-block' class='section-block'>
+          <div class='section-intro'>
+            <div class='section-name'>
               <span>SUMMARY</span>
             </div>
-            <div class='sectionIntroLine'></div>
+            <div class='section-intro-line'></div>
           </div>
-          <div class='sectionContent'>
+          <div class='section-content'>
             <span>Richard hails from Tulsa. He has earned degrees from the University of Oklahoma and Stanford. (Go Sooners and Cardinal!) Before starting Pied Piper, he worked for Hooli as a part time software developer. While his work focuses on applied information theory, mostly optimizing lossless compression schema of both the length-limited and adaptive variants, his non-work interests range widely, everything from quantum computing to chaos theory. He could tell you about it, but THAT would NOT be a “length-limited” conversation!</span>
           </div>
         </div>
-        <div class='sectionLine'></div>
-        <div id='skills' class='sectionBlock'>
-          <div class='sectionIntro'>
-            <div class='sectionName'>
+        <div class='section-line'></div>
+        <div id='skills' class='section-block'>
+          <div class='section-intro'>
+            <div class='section-name'>
               <span>SKILLS AND TECH</span>
             </div>
-            <div class='sectionIntroLine'></div>
+            <div class='section-intro-line'></div>
           </div>
-          <div class='sectionContent'>
+          <div class='section-content'>
             <ul class='highlights'>
                 <li>
                   <span class='title'>Web Development:</span>
@@ -238,17 +250,17 @@ a {
             </ul>
           </div>
         </div>
-        <div class='sectionLine'></div>
-        <div id='workBlock' class='sectionBlock'>
-          <div class='sectionIntro'>
-            <div class='sectionName'>
+        <div class='section-line'></div>
+        <div id='work-block' class='section-block'>
+          <div class='section-intro'>
+            <div class='section-name'>
               <span>EXPERIENCE</span>
             </div>
-            <div class='sectionIntroLine'></div>
+            <div class='section-intro-line'></div>
           </div>
-          <div class='sectionContent'>
-              <div class='jobBlock'>
-                <div class='blockHeader'>
+          <div class='section-content'>
+              <div class='job-block'>
+                <div class='block-header'>
                   <span class='organization'>Pied Piper</span>
                   <span class='title'>CEO/President</span>
                   <span class='date'>
@@ -257,7 +269,7 @@ a {
                   </span>
                 </div>
       
-                <div class='displayNone'>
+                <div class='display-none'>
                     <span class='location'>Palo Alto, CA</span>
                 </div>
       
@@ -269,16 +281,16 @@ a {
               </div>
           </div>
         </div>
-        <div class='sectionLine'></div>
-        <div id='volunteer' class='sectionBlock'>
-          <div class='sectionIntro'>
-            <div class='sectionName'>
+        <div class='section-line'></div>
+        <div id='volunteer' class='section-block'>
+          <div class='section-intro'>
+            <div class='section-name'>
               <span>VOLUNTEERING</span>
             </div>
-            <div class='sectionIntroLine'></div>
+            <div class='section-intro-line'></div>
           </div>
-          <div class='sectionContent'>
-              <div class='blockHeader'>
+          <div class='section-content'>
+              <div class='block-header'>
                 <span class='organization'>CoderDojo</span>
                 <span class='title'>Teacher</span>
                   <span class='date'>
@@ -291,15 +303,15 @@ a {
                 </ul>
           </div>
         </div>
-        <div class='sectionLine'></div>
-        <div id='projects' class='sectionBlock'>
-          <div class='sectionIntro'>
-            <div class='sectionName'>
+        <div class='section-line'></div>
+        <div id='projects' class='section-block'>
+          <div class='section-intro'>
+            <div class='section-name'>
               <span>PROJECTS</span>
             </div>
-            <div class='sectionIntroLine'></div>
+            <div class='section-intro-line'></div>
           </div>
-          <div class='sectionContent'>
+          <div class='section-content'>
             <ul class='highlights'>
                 <li>
                     <span class='title'><a href="missdirection.example.com">Miss Direction</a>: </span>
@@ -310,16 +322,16 @@ a {
             </ul>
           </div>
         </div>
-        <div class='sectionLine'></div>
-        <div id='education' class='sectionBlock'>
-          <div class='sectionIntro'>
-            <div class='sectionName'>
+        <div class='section-line'></div>
+        <div id='education' class='section-block'>
+          <div class='section-intro'>
+            <div class='section-name'>
               <span>EDUCATION</span>
             </div>
-            <div class='sectionIntroLine'></div>
+            <div class='section-intro-line'></div>
           </div>
-          <div class='sectionContent'>
-              <div class='blockHeader'>
+          <div class='section-content'>
+              <div class='block-header'>
                 <span class='title'>University of Oklahoma</span>
                   <span class='date'>
                     Jun 2011 &mdash;
@@ -331,16 +343,16 @@ a {
               </div>
           </div>
         </div>
-        <div class='sectionLine'></div>
-        <div id='publications' class='sectionBlock'>
-          <div class='sectionIntro'>
-            <div class='sectionName'>
+        <div class='section-line'></div>
+        <div id='publications' class='section-block'>
+          <div class='section-intro'>
+            <div class='section-name'>
               <span>PUBLICATIONS</span>
             </div>
-            <div class='sectionIntroLine'></div>
+            <div class='section-intro-line'></div>
           </div>
-          <div class='sectionContent'>
-              <div class='blockHeader'>
+          <div class='section-content'>
+              <div class='block-header'>
                 <span class='title'>Video compression for 3d media</span>
                   <span class='date'>
                     <time datetime="2014-10-01">Oct 2014</time>
@@ -348,16 +360,16 @@ a {
               </div>
           </div>
         </div>
-        <div class='sectionLine'></div>
-        <div id='awards' class='sectionBlock'>
-          <div class='sectionIntro'>
-            <div class='sectionName'>
+        <div class='section-line'></div>
+        <div id='awards' class='section-block'>
+          <div class='section-intro'>
+            <div class='section-name'>
               <span>AWARDS</span>
             </div>
-            <div class='sectionIntroLine'></div>
+            <div class='section-intro-line'></div>
           </div>
-          <div class='sectionContent'>
-              <div class='blockHeader'>
+          <div class='section-content'>
+              <div class='block-header'>
                 <span class='title'>Digital Compression Pioneer Award, Techcrunch</span>
                   <span class='date'>
                     <time datetime="2014-11-01">Nov 2014</time>
@@ -365,15 +377,15 @@ a {
               </div>
           </div>
         </div>
-        <div class='sectionLine'></div>
-        <div id='interests' class='sectionBlock'>
-          <div class='sectionIntro'>
-            <div class='sectionName'>
+        <div class='section-line'></div>
+        <div id='interests' class='section-block'>
+          <div class='section-intro'>
+            <div class='section-name'>
               <span>INTERESTS</span>
             </div>
-            <div class='sectionIntroLine'></div>
+            <div class='section-intro-line'></div>
           </div>
-          <div class='sectionContent'>
+          <div class='section-content'>
             <ul class='highlights'>
                 <li>
                   <span class='title'>Wildlife:</span>
@@ -382,7 +394,7 @@ a {
                 </li>
             </ul>
           </div>
-          <div class='sectionLine'></div>
+          <div class='section-line'></div>
         </div>
     </div>
   </div>

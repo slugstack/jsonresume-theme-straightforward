@@ -1,14 +1,14 @@
 {{#if resume.education.length}}
-  <div id='education' class='sectionBlock'>
-    <div class='sectionIntro'>
-      <div class='sectionName'>
+  <div id='education' class='section-block'>
+    <div class='section-intro'>
+      <div class='section-name'>
         <span>EDUCATION</span>
       </div>
-      <div class='sectionIntroLine'></div>
+      <div class='section-intro-line'></div>
     </div>
-    <div class='sectionContent'>
+    <div class='section-content'>
       {{#each resume.education}}
-        <div class='blockHeader'>
+        <div class='block-header'>
           <span class='title'>{{institution}}</span>
           {{#if startDate}}
             <span class='date'>
@@ -26,5 +26,5 @@
       {{/each}}
     </div>
   </div>
-  <div class='sectionLine'></div>
+  <div class='section-line'></div>
 {{/if}}
