@@ -1,11 +1,27 @@
 body {
-  background: #EEEEEE;
-  /* 13px to 15px looks good */
-  font-size: 13px;
   font-family: "Times New Roman", Times, sans-serif;
-  /* 1.4 or 1.5 looks good; eeking out spacing efficiency */
-  line-height: 1.38;
-  margin: 40px 0;
+  /* 13px to 15px looks good */
+  font-size: 15px;
+  /* 1.38, 1.4, or 1.5 looks good */
+  line-height: 1.4;
+  margin: 0 auto;
+}
+
+#wrapper {
+  margin: 0 auto;
+  max-width: 800px;
+}
+
+/* when generating the resume as a website or as headless, this will keep a nice readable margin in place */
+#resume {
+  margin: 0.4in;
+}
+
+/* use-case is when a user generates their resume as a website, saves their website as a PDF, and uses their browser to manage the margins during save */
+@media print {
+  #resume {
+    margin: 0;
+  }
 }
 
 ul {
@@ -20,14 +36,6 @@ a {
   color: black;
   /* it's less likely someone will click the links; removing underline to reduce noise */
   text-decoration: none;
-}
-
-#resume {
-  margin: 0 auto;
-  max-width: 600px;
-  padding: 40px 50px;
-  background: #fff;
-  border: 1px solid #ccc;
 }
 
 .displayNone,
@@ -138,61 +146,4 @@ a {
 
 .jobBlock {
   page-break-inside: avoid;
-}
-
-/* Media Queries */
-@media only screen and (max-width: 40em) {
-  body {
-    margin: 0;
-    font-size: 14px;
-  }
-
-  #resume {
-    margin: 0 auto;
-    max-width: 600px;
-    padding: 0.5em 1em;
-    border: none;
-  }
-
-  .sectionBlock {
-    flex-direction: column;
-  }
-
-  .sectionContent {
-    width: 100%;
-  }
-
-  .sectionContent .date {
-    padding-right: 2em;
-  }
-
-  .sectionName {
-    width: auto;
-  }
-
-  .largeFont {
-    font-size: 20px;
-  }
-
-  .smallFont {
-    font-size: 14px;
-  }
-}
-
-@media print {
-  body {
-    background: #FFFFFF;
-  }
-
-  #resume {
-    margin: 0 auto;
-    max-width: 600px;
-    padding: 0px 0px;
-    border: 0px;
-    background: #fff;
-  }
-
-  a {
-    color: black;
-  }
 }
