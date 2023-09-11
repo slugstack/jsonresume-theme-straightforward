@@ -1,6 +1,8 @@
 # jsonresume-theme-straightforward
 
-a straightforward [jsonresume](https://github.com/jsonresume) theme
+A straightforward [jsonresume](https://github.com/jsonresume) theme. 
+
+Fork freely, make it your own.
 
 ## examples
 
