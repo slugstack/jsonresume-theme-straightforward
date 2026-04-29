@@ -1,33 +1,33 @@
 {{#if resume.awards.length}}
-  <div id='awards' class='section-block'>
-    <div class='section-intro'>
-      <div class='section-name'>
+  <div id="awards" class="section-block">
+    <div class="section-intro">
+      <div class="section-name">
         <span>AWARDS</span>
       </div>
-      <div class='section-intro-line'></div>
+      <div class="section-intro-line"></div>
     </div>
-    <div class='section-content'>
+    <div class="section-content">
       {{#each resume.awards}}
-        <div class='block-header'>
-          <span class='title'>{{title}}{{#if awarder}}, {{awarder}}{{/if}}</span>
+        <div class="block-header">
+          <span class="title">{{title}}{{#if awarder}}, {{awarder}}{{/if}}</span>
           {{#if date}}
-            <span class='date'>
+            <span class="date">
               <time datetime="{{date}}">{{MONTH_YEAR date}}</time>
             </span>
           {{/if}}
         </div>
         {{#if highlights.length}}
-          <ul class='highlights'>
+          <ul class="highlights">
             {{#each highlights}}
               <li>{{.}}</li>
             {{/each}}
           </ul>
         {{/if}}
         {{#unless @last}}
-          <div class='separator'></div>
+          <div class="separator"></div>
         {{/unless}}
       {{/each}}
     </div>
   </div>
-  <div class='section-line'></div>
+  <div class="section-line"></div>
 {{/if}}

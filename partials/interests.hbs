@@ -1,16 +1,16 @@
 {{#if resume.interests.length}}
-  <div id='interests' class='section-block'>
-    <div class='section-intro'>
-      <div class='section-name'>
+  <div id="interests" class="section-block">
+    <div class="section-intro">
+      <div class="section-name">
         <span>INTERESTS</span>
       </div>
-      <div class='section-intro-line'></div>
+      <div class="section-intro-line"></div>
     </div>
-    <div class='section-content'>
-      <ul class='highlights'>
+    <div class="section-content">
+      <ul class="highlights">
         {{#each resume.interests}}
           <li>
-            <span class='title'>{{name}}:</span>
+            <span class="title">{{name}}:</span>
             {{#if keywords.length}}
               {{#each keywords}}
                 <span>{{.}}</span>{{#unless @last}}, {{/unless}}
@@ -20,6 +20,6 @@
         {{/each}}
       </ul>
     </div>
-    <div class='section-line'></div>
+    <div class="section-line"></div>
   </div>
 {{/if}}

@@ -1,57 +1,57 @@
 {{#resume.basics}}
-  <div class='basics'>
-    <div id='basics-left-content'>
+  <div class="basics">
+    <div id="basics-left-content">
       {{!-- note: this content should not appear or have any effect on styling, this is only to enable any automated content parsing --}}
-      <div class='display-none'>
+      <div class="display-none">
         {{#location}}
-          <span class='address'>
+          <span class="address">
             {{address}} {{city}} {{region}} {{postalCode}}
           </span>
         {{/location}}
         {{#if phone}}
-          <span class='phone'>
-            <a href="tel:{{phone}}">{{phone}}</a>
+          <span class="phone">
+            <a href="tel:{{phone}}">{{{FORMAT_PHONE phone}}}</a>
           </span>
         {{/if}}
       </div>
     </div>
 
-    <div id='basics-center-content'>
-      <span class='name'>{{name}}</span>
+    <div id="basics-center-content">
+      <span class="name">{{name}}</span>
     </div>
 
-    <div id='basics-right-content'>
-      <div class='contact-block'>
+    <div id="basics-right-content">
+      <div class="contact-block">
         {{#if email}}
           <div>
-            <span class='email'>
+            <span class="email">
               <a href="mailto:{{email}}">{{email}}</a>
             </span>
           </div>
         {{/if}}
         {{#if url}}
           <div>
-            <span class='url'>
-              <a href='{{url}}'>{{url}}</a>
+            <span class="url">
+              <a href="{{url}}">{{url}}</a>
             </span>
           </div>
         {{/if}}
         {{#location}}
           <div>
-            <span class='address'>{{city}}, {{STATE_ABBREVIATION_TO_FULL_NAME region}}</span>
+            <span class="address">{{city}}, {{STATE_ABBREVIATION_TO_FULL_NAME region}}</span>
           </div>
         {{/location}}
       </div>
 
       {{#if profiles.length}}
         {{!-- note: this will be hidden, here to enable any automated parsing of content --}}
-        <div class='display-none'>
+        <div class="display-none">
           {{#each profiles}}
             {{#if url}}
-              <span class='url'>
-                <a href='{{url}}'>{{url}}</a>
+              <span class="url">
+                <a href="{{url}}">{{url}}</a>
               </span>
-              {{#unless @last}}<span class='divider'>|</span>{{/unless}}
+              {{#unless @last}}<span class="divider">|</span>{{/unless}}
             {{/if}}
           {{/each}}
         </div>

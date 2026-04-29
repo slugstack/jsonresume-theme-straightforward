@@ -1,36 +1,36 @@
 {{#if resume.publications.length}}
-  <div id='publications' class='section-block'>
-    <div class='section-intro'>
-      <div class='section-name'>
+  <div id="publications" class="section-block">
+    <div class="section-intro">
+      <div class="section-name">
         <span>PUBLICATIONS</span>
       </div>
-      <div class='section-intro-line'></div>
+      <div class="section-intro-line"></div>
     </div>
-    <div class='section-content'>
+    <div class="section-content">
       {{#each resume.publications}}
-        <div class='block-header'>
-          <span class='title'>{{name}}</span>
+        <div class="block-header">
+          <span class="title">{{name}}</span>
           {{#if releaseDate}}
-            <span class='date'>
+            <span class="date">
               <time datetime="{{releaseDate}}">{{MONTH_YEAR releaseDate}}</time>
             </span>
           {{/if}}
         </div>
         {{#if website}}
-          <div class='website'><a href='{{website}}'>{{website}}</a></div>
+          <div class="website"><a href="{{website}}">{{website}}</a></div>
         {{/if}}
         {{#if highlights.length}}
-          <ul class='highlights'>
+          <ul class="highlights">
             {{#each highlights}}
               <li>{{.}}</li>
             {{/each}}
           </ul>
         {{/if}}
         {{#unless @last}}
-          <div class='separator'></div>
+          <div class="separator"></div>
         {{/unless}}
       {{/each}}
     </div>
   </div>
-  <div class='section-line'></div>
+  <div class="section-line"></div>
 {{/if}}

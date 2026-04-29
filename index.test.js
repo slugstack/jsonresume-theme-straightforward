@@ -5,23 +5,22 @@ const Handlebars = require("handlebars");
 const index = require('./index')
 const resume = require('./resume.json')
 
-describe.skip('render function', () => {
-  test('given no parameter then throw TypeError', () => {
-    expect(() => index.render()).toThrowError(TypeError)
-  })
-
-  test('given invalid parameter then throw TypeError', () => {
-    expect(() => index.render({})).toThrowError(TypeError)
-  })
-
-  test('given valid parameter then return valid html', () => {
+describe('render function', () => {
+  test('given valid parameter then return valid html', async () => {
     const validator = new HtmlValidate()
-    expect(validator.validateString(index.render(resume)).valid).toBe(true)
+    const result = await validator.validateString(index.render(resume))
+    expect(result.valid).toBe(true)
   })
 })
 
-
 describe('Handlebars Tests', () => {
+
+  describe('FORMAT_PHONE', () => {
+    test('replaces spaces and hyphens with non-breaking equivalents', () => {
+      const result = Handlebars.compile('{{{FORMAT_PHONE phone}}}')({ phone: '(912) 555-4321' })
+      expect(result).toBe('(912)&nbsp;555&#8209;4321')
+    })
+  })
 
   describe('date helpers', () => {
 

@@ -1,19 +1,19 @@
 {{#if resume.projects.length}}
-  <div id='projects' class='section-block'>
-    <div class='section-intro'>
-      <div class='section-name'>
+  <div id="projects" class="section-block">
+    <div class="section-intro">
+      <div class="section-name">
         <span>PROJECTS</span>
       </div>
-      <div class='section-intro-line'></div>
+      <div class="section-intro-line"></div>
     </div>
-    <div class='section-content'>
-      <ul class='highlights'>
+    <div class="section-content">
+      <ul class="highlights">
         {{#each resume.projects}}
           <li>
             {{#if url}}
-              <span class='title'><a href="{{url}}">{{name}}</a>: </span>
+              <span class="title"><a href="{{url}}">{{name}}</a>: </span>
             {{else}}
-              <span class='title'>{{name}}: </span>
+              <span class="title">{{name}}: </span>
             {{/if}}
             {{#if highlights.length}}
               {{#each highlights}}
@@ -26,5 +26,5 @@
       </ul>
     </div>
   </div>
-  <div class='section-line'></div>
+  <div class="section-line"></div>
 {{/if}}

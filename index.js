@@ -42,6 +42,21 @@ Handlebars.registerHelper('IF_DATES_HAVE_SAME_MONTH_AND_YEAR', function (arg1, a
 Handlebars.registerHelper('join', (arr, separator) =>
   arr.join(typeof separator === 'string' ? separator : ', '),
 )
+
+// FORMAT_PHONE replaces spaces with &nbsp; and hyphens with &#8209; (non-breaking variants)
+// to prevent browsers from wrapping phone numbers mid-digit (e.g. "(912) 555-" / "4321").
+// Triple braces {{{FORMAT_PHONE phone}}} are required in the template so Handlebars
+// does not double-escape the HTML entities.
+//
+// The phone number was just rendered as plain text via {{phone}} in the template. We added it because
+// html-validate was flagging it with the tel-non-breaking rule, which was blocking the HTML
+// validation test from passing.
+Handlebars.registerHelper('FORMAT_PHONE', phone =>
+  new Handlebars.SafeString(
+    phone.replace(/ /g, '&nbsp;').replace(/-/g, '&#8209;')
+  )
+)
+
 Handlebars.registerHelper('STATE_ABBREVIATION_TO_FULL_NAME', (state) => {
   const stateList = {
     AZ: 'Arizona',
@@ -172,4 +187,6 @@ exports.render = resume => {
   const template = fs.readFileSync(path.join(__dirname, 'resume.hbs'), 'utf-8')
 
   return Handlebars.compile(template)({ css, resume })
+    // Handlebars leaves trailing whitespace on lines from {{#if}} blocks that render empty; strip it to satisfy html-validate's no-trailing-whitespace rule
+    .replace(/[^\S\n]+$/gm, '')
 }

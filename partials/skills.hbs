@@ -1,16 +1,16 @@
 {{#if resume.skills.length}}
-  <div id='skills' class='section-block'>
-    <div class='section-intro'>
-      <div class='section-name'>
+  <div id="skills" class="section-block">
+    <div class="section-intro">
+      <div class="section-name">
         <span>SKILLS AND TECH</span>
       </div>
-      <div class='section-intro-line'></div>
+      <div class="section-intro-line"></div>
     </div>
-    <div class='section-content'>
-      <ul class='highlights'>
+    <div class="section-content">
+      <ul class="highlights">
         {{#each resume.skills}}
           <li>
-            <span class='title'>{{name}}:</span>
+            <span class="title">{{name}}:</span>
             {{#if keywords.length}}
               {{#each keywords}}
                 <span>{{.}}</span>{{#unless @last}}, {{/unless}}{{#if @last}}.{{/if}}
@@ -21,5 +21,5 @@
       </ul>
     </div>
   </div>
-  <div class='section-line'></div>
+  <div class="section-line"></div>
 {{/if}}
