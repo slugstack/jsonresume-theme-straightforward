@@ -27,4 +27,6 @@ npm test
 npm run export:html
 ```
 
+`npm install` is required before running any exports or tests. This theme installs itself as a local `file:.` dependency so that `resumed` can resolve it by package name.
+
 Note that running `npm run export:pdf` will result in a different binary every time it's run, even if the source hasn't changed. So it's not the most reliable indicator of differences.
