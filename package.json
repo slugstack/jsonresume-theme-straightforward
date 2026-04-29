@@ -26,8 +26,8 @@
   ],
   "scripts": {
     "export": "npm run export:html && npm run export:pdf",
-    "export:html": "resumed render -o docs/index.html -t .",
-    "export:pdf": "resumed export -o docs/index.pdf -t .",
+    "export:html": "resumed render -o docs/index.html -t jsonresume-theme-straightforward",
+    "export:pdf": "resumed export -o docs/index.pdf -t jsonresume-theme-straightforward",
     "lint": "npm run lint:eslint && npm run lint:pa11y",
     "lint:eslint": "eslint .",
     "lint:pa11y": "pa11y --reporter=cli $(pwd)/docs/index.html",
@@ -37,11 +37,12 @@
     "handlebars": "^4.7.6"
   },
   "devDependencies": {
+    "resumed": "^6.1.0",
+    "jsonresume-theme-straightforward": "file:.",
     "@types/jest": "^30.0.0",
     "eslint": "^10.0.0",
     "html-validate": "^10.0.0",
     "jest": "^30.0.2",
-    "pa11y": "^9.0.0",
-    "resumed": "^6.1.0"
+    "pa11y": "^9.0.0"
   }
 }
