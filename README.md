@@ -1,6 +1,6 @@
 # jsonresume-theme-straightforward
 
-A straightforward [jsonresume](https://github.com/jsonresume) theme. 
+A straightforward [jsonresume](https://github.com/jsonresume) theme.
 
 Fork freely, make it your own.
 
@@ -14,15 +14,14 @@ Fork freely, make it your own.
 ```sh
 npm install jsonresume-theme-straightforward
 
-resume export resume.pdf --format pdf --theme jsonresume-theme-straightforward
-resume export resume.html --format html --theme jsonresume-theme-straightforward
+resumed export resume.pdf -t jsonresume-theme-straightforward
+resumed render -o resume.html -t jsonresume-theme-straightforward
 ```
 
 ## building local
 
 ```sh
 npm install
-npm start
 npm test
 
 npm run export:html
