@@ -17,9 +17,11 @@ on:
 jobs:
   release:
     runs-on: ubuntu-latest
+
     permissions:
       contents: write
       id-token: write
+
     steps:
       - uses: actions/checkout@v6
       - uses: actions/setup-node@v6
@@ -55,8 +57,6 @@ jobs:
 
       - name: update-github-release
         uses: softprops/action-gh-release@v3
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           name: ${{ env.RELEASE_TAG }}
           tag_name: ${{ env.RELEASE_TAG }}
