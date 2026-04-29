@@ -25,10 +25,9 @@
     "style.css"
   ],
   "scripts": {
-    "start": "resume serve --theme .",
     "export": "npm-run-all export:*",
-    "export:html": "resume export docs/index.html --format html --theme .",
-    "export:pdf": "resume export docs/index.pdf --format pdf --theme .",
+    "export:html": "resumed render -o docs/index.html -t .",
+    "export:pdf": "resumed export -o docs/index.pdf -t .",
     "lint": "npm-run-all lint:*",
     "lint:eslint": "eslint .",
     "lint:pa11y": "pa11y --reporter=cli $(pwd)/docs/index.html",
@@ -44,6 +43,6 @@
     "jest": "^30.0.2",
     "npm-run-all": "^4.1.5",
     "pa11y": "^9.0.0",
-    "resume-cli": "3.1.2"
+    "resumed": "^6.1.0"
   }
 }
