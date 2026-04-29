@@ -17,12 +17,15 @@ on:
 jobs:
   release:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      id-token: write
     steps:
       - uses: actions/checkout@v6
       - uses: actions/setup-node@v6
         with:
           registry-url: https://registry.npmjs.org/
-          node-version: 16
+          node-version: 24
 
       - name: configure-git-user
         run: |
@@ -37,14 +40,9 @@ jobs:
 
       - name: commit-changes
         run: |
-          git add "package.json"
+          git add "package.json" "package-lock.json"
           git commit -m "chore: release ${{ env.RELEASE_TAG }}"
           git tag ${{ env.RELEASE_TAG }}
-
-      - name: publish-release
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPMJS_ACCESS_TOKEN }}
-        run: npm publish --access=public --tag=latest
 
       - name: push-changes-back-to-repository
         env:
@@ -52,8 +50,11 @@ jobs:
         run: |
           git push origin && git push --tags
 
+      - name: publish-release
+        run: npm publish --provenance --access=public --tag=latest
+
       - name: update-github-release
-        uses: softprops/action-gh-release@v2
+        uses: softprops/action-gh-release@v3
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
