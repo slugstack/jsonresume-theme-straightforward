@@ -33,6 +33,11 @@
   }
 }
 
+/* Page margins for PDF export (Puppeteer / print). Without this, the export defaults to ~0 margin. */
+@page {
+  margin: 0.5in;
+}
+
 ul {
   margin-bottom: 0;
 }
@@ -144,6 +149,11 @@ a {
   padding-left: 20px;
   margin-top: 3px;
   list-style-type: circle;
+}
+
+.highlights li {
+  line-height: 1.15;
+  margin-bottom: 0;
 }
 
 .section-content .title {
