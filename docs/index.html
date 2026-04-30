@@ -3,12 +3,12 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Richard Hendriks</title>
-    <meta name="description" content="Richard hails from Tulsa. He has earned degrees from the University of Oklahoma and Stanford. (Go Sooners and Cardinal!) Before starting Pied Piper, he worked for Hooli as a part time software developer. While his work focuses on applied information theory, mostly optimizing lossless compression schema of both the length-limited and adaptive variants, his non-work interests range widely, everything from quantum computing to chaos theory. He could tell you about it, but THAT would NOT be a “length-limited” conversation!">
+  <title>Thomas Davis</title>
+    <meta name="description" content="Full stack developer with 15+ years building products from the ground up at startups and open source. Recently focused on generative AI — building LLM-powered applications with Vercel AI SDK, designing MCP tool ecosystems, and creating AI agent infrastructure. Product-minded engineer who ships fast and prioritizes user feedback.">
   <meta name="viewport" content="width=device-width, minimal-ui">
-  <meta name="resume-version" content="v1.0.0">
+  <meta name="resume-version" content="">
   <style>body {
-  font-family: "Times New Roman", Times, sans-serif;
+  font-family: "Times New Roman", Times, serif;
   /* 13px to 15px looks good */
   font-size: 15px;
   /* 1.38, 1.4, or 1.5 looks good */
@@ -58,31 +58,29 @@ a {
 }
 
 .basics {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.basics>* {
-  flex-grow: 1;
-  flex-shrink: 1;
-  flex-basis: 30%;
-}
-
-#basics-center-content {
   text-align: center;
-  font-size: 30px;
+  margin-bottom: 10px;
 }
 
-#basics-right-content {
-  text-align: right;
+.basics-name {
+  font-size: 33px;
+  font-weight: normal;
+  margin: 0 0 2px 0;
+  line-height: 1.1;
+}
+
+.basics-contact-row {
   font-size: 13px;
+  line-height: 1.2;
 }
 
-.basics .divider {
-  font-weight: bold;
-  margin-left: 5px;
-  margin-right: 5px;
+.basics-contact-row:empty {
+  display: none;
+}
+
+.basics-contact-item + .basics-contact-item::before {
+  content: "·";
+  margin: 0 6px;
 }
 
 .section-block {
@@ -93,14 +91,15 @@ a {
 .section-name {
   color: #004687;
   display: block;
-  font-weight: bold;
+  font-weight: 600;
+  font-size: 18px;
 }
 
 .section-line {
   border-color: none;
   border-style: hidden;
   border-width: 1px;
-  margin-top: 6px;
+  margin-top: 3px;
   margin-bottom: 3px;
 }
 
@@ -119,7 +118,9 @@ a {
 }
 
 .block-header .date {
-  font-weight: bold;
+  font-weight: normal;
+  font-style: italic;
+  color: #555;
   text-align: right;
   margin-left: auto;
   white-space: nowrap;
@@ -130,8 +131,15 @@ a {
   text-align: left;
 }
 
+#work-block .block-header .organization {
+  font-weight: normal;
+  font-style: italic;
+  color: #555;
+}
+
 .block-header .title {
-  font-weight: bold;
+  font-weight: 600;
+  font-size: 16px;
   text-align: left;
 }
 
@@ -144,6 +152,7 @@ a {
 .section-content {
   display: block;
   line-height: 1.15;
+  padding-left: 6px;
 }
 
 .section-content ul {
@@ -154,6 +163,11 @@ a {
 
 .highlights li {
   margin-bottom: 0;
+}
+
+.job-meta {
+  font-style: italic;
+  color: #555;
 }
 
 .job-summary {
@@ -186,113 +200,298 @@ a {
   <div id="wrapper">
     <div id="resume">
         <div class="basics">
-          <div id="basics-left-content">
-            <div class="display-none">
-                <span class="address">
-                  2712 Broadway St San Francisco California CA 94115
-                </span>
-                <span class="phone">
-                  <a href="tel:(912) 555-4321">(912)&nbsp;555&#8209;4321</a>
-                </span>
+          <h1 class="basics-name">Thomas Davis</h1>
+
+          <div class="basics-contact-row">
+                <span class="basics-contact-item">Melbourne</span>
+              <span class="basics-contact-item"><a href="mailto:thomasalwyndavis@gmail.com">thomasalwyndavis@gmail.com</a></span>
+              <span class="basics-contact-item"><a href="tel:0411021021">0411021021</a></span>
+          </div>
+
+            <div class="basics-contact-row">
+              <span class="basics-contact-item"><a href="https://ajaxdavis.dev">https://ajaxdavis.dev</a></span>
+                  <span class="basics-contact-item"><a href="https://twitter.com/ajaxdavis">twitter.com/ajaxdavis</a></span>
+                  <span class="basics-contact-item"><a href="https://github.com/thomasdavis">github.com/thomasdavis</a></span>
             </div>
-          </div>
-
-          <div id="basics-center-content">
-            <span class="name">Richard Hendriks</span>
-          </div>
-
-          <div id="basics-right-content">
-            <div class="contact-block">
-                <div>
-                  <span class="email">
-                    <a href="mailto:richard.hendriks@mail.com">richard.hendriks@mail.com</a>
-                  </span>
-                </div>
-                <div>
-                  <span class="url">
-                    <a href="http://richardhendricks.example.com">http://richardhendricks.example.com</a>
-                  </span>
-                </div>
-                <div>
-                  <span class="address">San Francisco, California</span>
-                </div>
-            </div>
-
-              <div class="display-none">
-                    <span class="url">
-                      <a href="https://soundcloud.example.com/dandymusicnl">https://soundcloud.example.com/dandymusicnl</a>
-                    </span>
-
-              </div>
-
-          </div>
         </div>
-
         <div id="summary-block" class="section-block">
-          <div class="section-intro">
-            <div class="section-name">
-              <span>SUMMARY</span>
-            </div>
-            <div class="section-intro-line"></div>
-          </div>
           <div class="section-content">
-            <span>Richard hails from Tulsa. He has earned degrees from the University of Oklahoma and Stanford. (Go Sooners and Cardinal!) Before starting Pied Piper, he worked for Hooli as a part time software developer. While his work focuses on applied information theory, mostly optimizing lossless compression schema of both the length-limited and adaptive variants, his non-work interests range widely, everything from quantum computing to chaos theory. He could tell you about it, but THAT would NOT be a “length-limited” conversation!</span>
-          </div>
-        </div>
-        <div class="section-line"></div>
-        <div id="skills" class="section-block">
-          <div class="section-intro">
-            <div class="section-name">
-              <span>SKILLS AND TECH</span>
-            </div>
-            <div class="section-intro-line"></div>
-          </div>
-          <div class="section-content">
-            <ul class="highlights">
-                <li>
-                  <span class="title">Web Development:</span>
-                      <span>HTML</span>,
-                      <span>CSS</span>,
-                      <span>Javascript</span>.
-                </li>
-                <li>
-                  <span class="title">Compression:</span>
-                      <span>Mpeg</span>,
-                      <span>MP4</span>,
-                      <span>GIF</span>.
-                </li>
-            </ul>
+            <span>Full stack developer with 15+ years building products from the ground up at startups and open source. Recently focused on generative AI — building LLM-powered applications with Vercel AI SDK, designing MCP tool ecosystems, and creating AI agent infrastructure. Product-minded engineer who ships fast and prioritizes user feedback.</span>
           </div>
         </div>
         <div class="section-line"></div>
         <div id="work-block" class="section-block">
           <div class="section-intro">
             <div class="section-name">
-              <span>EXPERIENCE</span>
+              <span>Experience</span>
             </div>
             <div class="section-intro-line"></div>
           </div>
           <div class="section-content">
               <div class="job-block">
                 <div class="block-header">
-                  <span class="title">CEO/President</span>
-                  <span class="organization">Pied Piper, Palo Alto, CA</span>
+                  <span class="title">Product Engineer (AI Focus)</span>
                   <span class="date">
-                    <time datetime="2013-12-01">Dec 2013</time> &mdash;
-                    <time datetime="2014-12-01">Dec 2014</time>
+                    <time datetime="2020-05-05">May 2020</time> &mdash;
+                    Present
                   </span>
                 </div>
 
+                <div class="job-meta">Misc Companies, Melbourne</div>
+
                 <div class="display-none">
+                    <span class="website"><a href="https://ajaxdavis.dev/">https://ajaxdavis.dev/</a></span>
                 </div>
 
-                  <div class="job-summary">Pied Piper is a multi-platform technology based on a proprietary universal compression algorithm that has consistently fielded high Weisman Scores™ that are not merely competitive, but approach the theoretical limit of lossless compression.</div>
+                  <div class="job-summary">Working at early-stage startups building generative AI products. Building full stack applications with Vercel AI SDK, designing LLM pipelines with structured outputs, implementing vector search and RAG systems, and creating AI agent tooling including MCP servers and Claude Code skills. Managing cloud infrastructure on GCP with Kubernetes for production workloads.</div>
 
                   <ul class="highlights">
-                      <li>Build an algorithm for artist to detect if their music was violating copy right infringement laws</li>
-                      <li>Successfully won Techcrunch Disrupt</li>
-                      <li>Optimized an algorithm that holds the current world record for Weisman Scores</li>
+                      <li>Vercel AI SDK / OpenAI / Anthropic</li>
+                      <li>Structured outputs, embeddings, vector search</li>
+                      <li>MCP servers and AI agent infrastructure</li>
+                      <li>GCP / Kubernetes / Cloud Infrastructure</li>
+                      <li>React / Next.js / TypeScript</li>
+                      <li>Node.js / PostgreSQL / Supabase</li>
                   </ul>
+                  <div class="separator"></div>
+              </div>
+              <div class="job-block">
+                <div class="block-header">
+                  <span class="title">Senior Javascript Developer</span>
+                  <span class="date">
+                    <time datetime="2020-05-05">May 2020</time> &mdash;
+                    <time datetime="2021-05-05">May 2021</time>
+                  </span>
+                </div>
+
+                <div class="job-meta">Tokenized, Melbourne</div>
+
+                <div class="display-none">
+                    <span class="website"><a href="https://tokenized.com/">https://tokenized.com/</a></span>
+                </div>
+
+                  <div class="job-summary">Tokenized is a Bitcoin wallet for issuing, managing and trading digital tokens. I built out the front end which was packaged as an electron app. It was a difficult frontend to build because we store the users keys locally and used them to sign transactions and contracts.</div>
+
+                  <ul class="highlights">
+                      <li>React</li>
+                      <li>Redux</li>
+                      <li>SCSS</li>
+                      <li>Product</li>
+                  </ul>
+                  <div class="separator"></div>
+              </div>
+              <div class="job-block">
+                <div class="block-header">
+                  <span class="title">Senior Javascript Developer</span>
+                  <span class="date">
+                    <time datetime="2018-03-01">Mar 2018</time> &mdash;
+                    <time datetime="2020-01-01">Jan 2020</time>
+                  </span>
+                </div>
+
+                <div class="job-meta">Blockbid, Melbourne</div>
+
+                <div class="display-none">
+                    <span class="website"><a href="https://platform.blockbid.io">https://platform.blockbid.io</a></span>
+                </div>
+
+                  <div class="job-summary">Blockbid is an Australian crypto currency exchange. I started off on the frontend but eventually became lead tech and worked on every moving piece of the exchange. I really enjoyed working with liquidity providers and connecting their platforms to help us achieve liquid markets.</div>
+
+                  <ul class="highlights">
+                      <li>React, Apollo, Styled Components</li>
+                      <li>Node.js / Rails</li>
+                      <li>Docker / Heroku / GCP</li>
+                      <li>Used Figma for design and UX work</li>
+                      <li>Optimizing markets with tens of millions of rows using SQL.</li>
+                  </ul>
+                  <div class="separator"></div>
+              </div>
+              <div class="job-block">
+                <div class="block-header">
+                  <span class="title">Developer</span>
+                  <span class="date">
+                    <time datetime="2016-01-01">Jan 2016</time> &mdash;
+                    <time datetime="2018-01-01">Jan 2018</time>
+                  </span>
+                </div>
+
+                <div class="job-meta">Listium</div>
+
+                <div class="display-none">
+                    <span class="website"><a href="https://listium.com">https://listium.com</a></span>
+                </div>
+
+                  <div class="job-summary">Built a very large and complex React / Redux application. It works on all platforms and has IOS/Android builds due to it being a PWA. (wrapped it in React Native though only implementing a WebView)</div>
+
+                  <ul class="highlights">
+                      <li>Worked with Postgres, Redis and Dynamodb for storage.</li>
+                      <li>Hosted on a mixture of Heroku Apps and EC2 servers.</li>
+                      <li>Caching by Fastly and Cloudflare</li>
+                      <li>Hybrid app supported on all platforms</li>
+                  </ul>
+                  <div class="separator"></div>
+              </div>
+              <div class="job-block">
+                <div class="block-header">
+                  <span class="title">Developer</span>
+                  <span class="date">
+                    <time datetime="2014-04-01">Apr 2014</time> &mdash;
+                    <time datetime="2016-01-01">Jan 2016</time>
+                  </span>
+                </div>
+
+                <div class="job-meta">Electronic Frontier Foundation</div>
+
+                <div class="display-none">
+                    <span class="website"><a href="http://www.eff.org">http://www.eff.org</a></span>
+                </div>
+
+                  <div class="job-summary">Hired to take EFF&#x27;s campaigning to the next level by building an action centre in Ruby on Rails. The action centre is built around some large open source tools that lower the barrier to entry when contacting congress.</div>
+
+                  <ul class="highlights">
+                      <li>Developed new tools for contacting congress</li>
+                      <li>Brainstormed campaign ideas to raise maximum awareness about issues</li>
+                      <li>Lots of social networking integration</li>
+                  </ul>
+                  <div class="separator"></div>
+              </div>
+              <div class="job-block">
+                <div class="block-header">
+                  <span class="title">CTO</span>
+                  <span class="date">
+                    <time datetime="2013-03-08">Mar 2013</time> &mdash;
+                    <time datetime="2015-01-09">Jan 2015</time>
+                  </span>
+                </div>
+
+                <div class="job-meta">Earbits</div>
+
+                <div class="display-none">
+                    <span class="website"><a href="http://www.earbits.com">http://www.earbits.com</a></span>
+                </div>
+
+                  <div class="job-summary">Started off as a front end developer but took on the role of CTO in early 2013. The application frontend is built with Javascript and organized as a single page application that talks to a collection of Rails web servers which are connected to MongoDB.</div>
+
+                  <ul class="highlights">
+                      <li>Managed a small team of developers and designers</li>
+                      <li>Built the entire frontend application with Backbone.js</li>
+                      <li>Transferred all of the infrastructure from Heroku to AWS</li>
+                  </ul>
+                  <div class="separator"></div>
+              </div>
+              <div class="job-block">
+                <div class="block-header">
+                  <span class="title">Founder</span>
+                  <span class="date">
+                    <time datetime="2014-04-01">Apr 2014</time> &mdash;
+                    Present
+                  </span>
+                </div>
+
+                <div class="job-meta">JSON Resume</div>
+
+                <div class="display-none">
+                    <span class="website"><a href="http://jsonresume.org">http://jsonresume.org</a></span>
+                </div>
+
+                  <div class="job-summary">JSON Resume is a community driven open source initiative to create a JSON based standard for resumes. There is no reason why there can&#x27;t be a common standard for writing a resume that can be extended with an ecosystem of open source tools.</div>
+
+                  <ul class="highlights">
+                      <li>This resume is built with JSON Resume</li>
+                      <li>Over 5000 stars on Github</li>
+                      <li>Community developed themes</li>
+                      <li>Tens of thousands of users</li>
+                  </ul>
+                  <div class="separator"></div>
+              </div>
+              <div class="job-block">
+                <div class="block-header">
+                  <span class="title">Developer</span>
+                  <span class="date">
+                    <time datetime="2013-06-01">Jun 2013</time> &mdash;
+                    <time datetime="2016-01-01">Jan 2016</time>
+                  </span>
+                </div>
+
+                <div class="job-meta">Taskforce.is</div>
+
+                <div class="display-none">
+                    <span class="website"><a href="http://www.taskforce.is">http://www.taskforce.is</a></span>
+                </div>
+
+                  <div class="job-summary">Worked on many politically charged campaigns against mass surveillance. Not only technically challenging work but also a lot of networking and getting my hands dirty with politics.    Our biggest project was &quot;TheDayWeFightBack&quot;..</div>
+
+                  <ul class="highlights">
+                      <li>Generated  37,000,000 banner views</li>
+                      <li>100, 000 phone calls to congress</li>
+                      <li>500, 000 emails</li>
+                      <li>250, 000 signatures</li>
+                  </ul>
+                  <div class="separator"></div>
+              </div>
+              <div class="job-block">
+                <div class="block-header">
+                  <span class="title">Co-Founder</span>
+                  <span class="date">
+                    <time datetime="2013-01-01">Jan 2013</time> &mdash;
+                    Present
+                  </span>
+                </div>
+
+                <div class="job-meta">Drone Hire</div>
+
+                <div class="display-none">
+                    <span class="website"><a href="http://www.dronehire.org">http://www.dronehire.org</a></span>
+                </div>
+
+                  <div class="job-summary">An international directory of civilian drone / UAV operators for hire. Services include aerial photography, aerial video, mapping, surveying, precision agriculture, real estate photography, remote inspections and infrared imaging. Our plan is to be the place to go when looking for UAV/Drone services. The website is built in Backbone.js and API is built with Node.js and Postgres. </div>
+
+                  <ul class="highlights">
+                      <li>The site and blog combined have managed to receive over 200,000 visitors in 2014.</li>
+                  </ul>
+                  <div class="separator"></div>
+              </div>
+              <div class="job-block">
+                <div class="block-header">
+                  <span class="title">Founder</span>
+                  <span class="date">
+                    <time datetime="2011-01-01">Jan 2011</time> &mdash;
+                    <time datetime="2014-01-01">Jan 2014</time>
+                  </span>
+                </div>
+
+                <div class="job-meta">BackboneTutorials.com</div>
+
+                <div class="display-none">
+                    <span class="website"><a href="http://backbonetutorials.com">http://backbonetutorials.com</a></span>
+                </div>
+
+                  <div class="job-summary">I write tutorials and blog post regarding the popular Javascript framework Backbone.js. The tutorials cover a range of topics regarding front end development aimed at beginners, experts and anyone in between.</div>
+
+                  <ul class="highlights">
+                      <li>Over two million unique visitors a year</li>
+                      <li>25,000+ ebook downloads</li>
+                      <li>300,000+ Youtube views</li>
+                  </ul>
+                  <div class="separator"></div>
+              </div>
+              <div class="job-block">
+                <div class="block-header">
+                  <span class="title">Front-end Developer</span>
+                  <span class="date">
+                    <time datetime="2011-01-01">Jan 2011</time> &mdash;
+                    <time datetime="2012-06-01">Jun 2012</time>
+                  </span>
+                </div>
+
+                <div class="job-meta">Ephox</div>
+
+                <div class="display-none">
+                    <span class="website"><a href="http://ephox.com">http://ephox.com</a></span>
+                </div>
+
+                  <div class="job-summary">Ephox is a worldwide company who is heavily involved with the development of TinyMce and enterprise editors. My primary role included building front-end widgets and applications. Worked on a major product using Backbone.js as a base. Heavily involved in UI/UX design and wire-framing. Also spend a lot of time designing API specifications and documentation.</div>
+
               </div>
           </div>
         </div>
@@ -300,21 +499,24 @@ a {
         <div id="volunteer" class="section-block">
           <div class="section-intro">
             <div class="section-name">
-              <span>VOLUNTEERING</span>
+              <span>Volunteering</span>
             </div>
             <div class="section-intro-line"></div>
           </div>
           <div class="section-content">
               <div class="block-header">
-                <span class="title">Teacher</span>
-                <span class="organization">CoderDojo</span>
+                <span class="title">Contributor</span>
                   <span class="date">
-                      Jan 2012 &mdash;
-                      Jan 2013
+                      Jan 2016 &mdash;
+                      Present
                   </span>
               </div>
+
+              <div class="job-meta">Open Source Project</div>
+
                 <ul class="highlights">
-                    <li>Awarded &#x27;Teacher of the Month&#x27;</li>
+                    <li>Fixed critical bugs and added new features.</li>
+                    <li>Mentored new contributors.</li>
                 </ul>
           </div>
         </div>
@@ -322,17 +524,60 @@ a {
         <div id="projects" class="section-block">
           <div class="section-intro">
             <div class="section-name">
-              <span>PROJECTS</span>
+              <span>Projects</span>
             </div>
             <div class="section-intro-line"></div>
           </div>
           <div class="section-content">
             <ul class="highlights">
                 <li>
-                    <span class="title"><a href="missdirection.example.com">Miss Direction</a>: </span>
-                      <span>Won award at AIHacks 2016</span>.
-                      <span>Built by all women team of newbie programmers</span>.
-                      <span>Using modern technologies such as GoogleMaps, Chrome Extension and Javascript</span>.
+                    <span class="title">JSON Resume: </span>
+                      <span>5000+ GitHub stars, tens of thousands of users</span>.
+                      <span>AI job matching with vector embeddings and semantic search</span>.
+                      <span>Built with Next.js, Supabase, Vercel AI SDK</span>.
+                      <span>Community developed themes ecosystem</span>.
+                </li>
+                <li>
+                    <span class="title">Cdnjs: </span>
+                      <span>Millions of sites use the CDN in production</span>.
+                      <span>Larger market share than Yahoo&#x27;s, Microsoft&#x27;s and Google&#x27;s javascript content distribution networks</span>.
+                      <span>We serve hundreds of billions request a month</span>.
+                      <span>Contains over 3000 popular Javascript libraries</span>.
+                </li>
+                <li>
+                    <span class="title"><a href="https://github.com/thomasdavis/omega">Omega</a>: </span>
+                      <span>80+ AI tools including code execution in 42+ languages</span>.
+                      <span>Self-evolution capability — analyzes behavior and proposes improvements via GitHub issues</span>.
+                      <span>Dual database architecture (PostgreSQL + MongoDB)</span>.
+                      <span>AI-powered decision making for natural conversation participation</span>.
+                </li>
+                <li>
+                    <span class="title"><a href="https://github.com/thomasdavis/alpha2">Alpha</a>: </span>
+                      <span>Custom tensor backend with tape-based reverse-mode autodiff</span>.
+                      <span>Hand-written Vulkan GPU backend with TS-generated SPIR-V kernels</span>.
+                      <span>Full training pipeline: BPE tokenizers, checkpointing, eval, sampling</span>.
+                      <span>OpenAI-compatible chat API, CLI, web dashboard, and TUI</span>.
+                </li>
+                <li>
+                    <span class="title"><a href="https://tpmjs.com">TPMJS</a>: </span>
+                      <span>Auto-discovers npm packages with tpmjs keyword</span>.
+                      <span>Sandboxed tool execution via Deno runtime</span>.
+                      <span>MCP aggregator for connecting tool collections to Claude, Cursor, etc.</span>.
+                      <span>Agent platform for building, sharing, and forking AI agents</span>.
+                </li>
+                <li>
+                    <span class="title"><a href="https://github.com/thomasdavis/blocks">Blocks</a>: </span>
+                      <span>Domain specification via blocks.yml for entities, signals, measures, and rules</span>.
+                      <span>Multi-layer validation: Schema, Shape, and AI-powered Domain checks</span>.
+                      <span>Semantic feedback loop for AI coding tools</span>.
+                      <span>Drift detection between code and specification</span>.
+                </li>
+                <li>
+                    <span class="title"><a href="https://github.com/yourusername/mobtranslate.com">MobTranslate</a>: </span>
+                      <span>Implemented multilingual dictionary with advanced search and pagination.</span>.
+                      <span>Added real-time translation API using AI techniques.</span>.
+                      <span>Optimized performance with server-side rendering (Next.js).</span>.
+                      <span>Structured codebase as a monorepo using Turborepo.</span>.
                 </li>
             </ul>
           </div>
@@ -341,7 +586,7 @@ a {
         <div id="education" class="section-block">
           <div class="section-intro">
             <div class="section-name">
-              <span>EDUCATION</span>
+              <span>Education</span>
             </div>
             <div class="section-intro-line"></div>
           </div>
@@ -362,7 +607,7 @@ a {
         <div id="publications" class="section-block">
           <div class="section-intro">
             <div class="section-name">
-              <span>PUBLICATIONS</span>
+              <span>Publications</span>
             </div>
             <div class="section-intro-line"></div>
           </div>
@@ -379,33 +624,138 @@ a {
         <div id="awards" class="section-block">
           <div class="section-intro">
             <div class="section-name">
-              <span>AWARDS</span>
+              <span>Awards</span>
             </div>
             <div class="section-intro-line"></div>
           </div>
           <div class="section-content">
               <div class="block-header">
-                <span class="title">Digital Compression Pioneer Award, Techcrunch</span>
+                <span class="title">Defender of the Internet, Fight For The Future</span>
                   <span class="date">
-                    <time datetime="2014-11-01">Nov 2014</time>
+                    <time datetime="2014-10-02">Oct 2014</time>
                   </span>
               </div>
           </div>
         </div>
         <div class="section-line"></div>
-        <div id="interests" class="section-block">
+        <div id="skills" class="section-block">
           <div class="section-intro">
             <div class="section-name">
-              <span>INTERESTS</span>
+              <span>Skills and Tech</span>
             </div>
             <div class="section-intro-line"></div>
           </div>
           <div class="section-content">
             <ul class="highlights">
                 <li>
-                  <span class="title">Wildlife:</span>
-                      <span>Ferrets</span>,
-                      <span>Unicorns</span>
+                  <span class="title">AI &amp; LLMs:</span>
+                      <span>Vercel AI SDK</span>,
+                      <span>OpenAI API</span>,
+                      <span>Anthropic API</span>,
+                      <span>Google Gemini</span>,
+                      <span>Structured Outputs</span>,
+                      <span>Embeddings / Vector Search</span>,
+                      <span>RAG Pipelines</span>,
+                      <span>AI Agents</span>,
+                      <span>Model Context Protocol (MCP)</span>,
+                      <span>Prompt Engineering</span>,
+                      <span>LLM Training (from scratch)</span>,
+                      <span>Autograd / Tensor Operations</span>.
+                </li>
+                <li>
+                  <span class="title">Frontend:</span>
+                      <span>React</span>,
+                      <span>Next.js</span>,
+                      <span>TypeScript</span>,
+                      <span>JavaScript</span>,
+                      <span>HTML / JSX</span>,
+                      <span>Tailwind CSS</span>,
+                      <span>Styled Components</span>,
+                      <span>Redux</span>,
+                      <span>Apollo / GraphQL</span>,
+                      <span>Electron</span>,
+                      <span>Three.js</span>,
+                      <span>Backbone.js</span>.
+                </li>
+                <li>
+                  <span class="title">Backend:</span>
+                      <span>Node.js</span>,
+                      <span>Go</span>,
+                      <span>Python</span>,
+                      <span>Ruby on Rails</span>,
+                      <span>PostgreSQL</span>,
+                      <span>MongoDB</span>,
+                      <span>Redis</span>,
+                      <span>Supabase</span>,
+                      <span>REST APIs</span>,
+                      <span>WebSockets</span>,
+                      <span>Deno</span>.
+                </li>
+                <li>
+                  <span class="title">Cloud &amp; DevOps:</span>
+                      <span>Google Cloud Platform (GCP)</span>,
+                      <span>Kubernetes</span>,
+                      <span>AWS</span>,
+                      <span>Docker</span>,
+                      <span>Vercel</span>,
+                      <span>Railway</span>,
+                      <span>Heroku</span>,
+                      <span>GitHub Actions</span>,
+                      <span>CI/CD Pipelines</span>,
+                      <span>Serverless</span>,
+                      <span>Cloudflare</span>.
+                </li>
+                <li>
+                  <span class="title">Architecture &amp; Tooling:</span>
+                      <span>Monorepos (Turborepo)</span>,
+                      <span>System Design</span>,
+                      <span>API Design</span>,
+                      <span>Microservices</span>,
+                      <span>Real-time Systems (Pusher / Yjs)</span>,
+                      <span>CLI Tools</span>,
+                      <span>npm Package Publishing</span>,
+                      <span>Open Source Maintenance</span>.
+                </li>
+                <li>
+                  <span class="title">Low-Level &amp; GPU:</span>
+                      <span>C</span>,
+                      <span>Vulkan</span>,
+                      <span>SPIR-V Shader Generation</span>,
+                      <span>GPU Compute</span>,
+                      <span>Mixed Precision (FP16)</span>.
+                </li>
+            </ul>
+          </div>
+        </div>
+        <div class="section-line"></div>
+        <div id="interests" class="section-block">
+          <div class="section-intro">
+            <div class="section-name">
+              <span>Interests</span>
+            </div>
+            <div class="section-intro-line"></div>
+          </div>
+          <div class="section-content">
+            <ul class="highlights">
+                <li>
+                  <span class="title">Gardening:</span>
+                      <span>Lazy Gardening</span>
+                </li>
+                <li>
+                  <span class="title">Music:</span>
+                      <span>Guitar</span>,
+                      <span>Singing</span>,
+                      <span>Dancing</span>
+                </li>
+                <li>
+                  <span class="title">Books:</span>
+                      <span>Reading</span>,
+                      <span>Writing</span>,
+                      <span>History</span>
+                </li>
+                <li>
+                  <span class="title">Open Source:</span>
+                      <span>All of it</span>
                 </li>
             </ul>
           </div>

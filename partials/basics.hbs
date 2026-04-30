@@ -1,64 +1,40 @@
 {{#resume.basics}}
   <div class="basics">
-    <div id="basics-left-content">
-      {{!-- hidden for now; left here in case we want to make it visible in the future --}}
-      <div class="display-none">
-        {{#location}}
-          {{!-- TODO split this? So if address itself isn't present, but city/region/postal is it shows up better without leading space --}}
-          <span class="address">
-            {{address}} {{city}} {{region}} {{postalCode}}
-          </span>
-        {{/location}}
-        {{#if phone}}
-          <span class="phone">
-            <a href="tel:{{phone}}">{{{FORMAT_PHONE phone}}}</a>
-          </span>
+    <h1 class="basics-name">{{name}}</h1>
+
+    <div class="basics-contact-row">
+      {{#location}}
+        {{#if city}}
+          <span class="basics-contact-item">{{city}}{{#if region}}, {{STATE_ABBREVIATION_TO_FULL_NAME region}}{{/if}}</span>
         {{/if}}
-      </div>
+      {{/location}}
+      {{#if email}}
+        <span class="basics-contact-item"><a href="mailto:{{email}}">{{email}}</a></span>
+      {{/if}}
+      {{#if phone}}
+        <span class="basics-contact-item"><a href="tel:{{phone}}">{{{FORMAT_PHONE phone}}}</a></span>
+      {{/if}}
     </div>
 
-    <div id="basics-center-content">
-      <span class="name">{{name}}</span>
-    </div>
-
-    <div id="basics-right-content">
-      <div class="contact-block">
-        {{#if email}}
-          <div>
-            <span class="email">
-              <a href="mailto:{{email}}">{{email}}</a>
-            </span>
-          </div>
-        {{/if}}
-        {{#if url}}
-          <div>
-            <span class="url">
-              <a href="{{url}}">{{url}}</a>
-            </span>
-          </div>
-        {{/if}}
-        {{#location}}
-          <div>
-            <span class="address">{{city}}, {{STATE_ABBREVIATION_TO_FULL_NAME region}}</span>
-          </div>
-        {{/location}}
+    {{#if url}}
+      <div class="basics-contact-row">
+        <span class="basics-contact-item"><a href="{{url}}">{{url}}</a></span>
+        {{#each profiles}}
+          {{#if url}}
+            <span class="basics-contact-item"><a href="{{url}}">{{STRIP_PROTOCOL url}}</a></span>
+          {{/if}}
+        {{/each}}
       </div>
-
+    {{else}}
       {{#if profiles.length}}
-        {{!-- hidden for now; left here in case we want to make it visible in the future --}}
-        <div class="display-none">
+        <div class="basics-contact-row">
           {{#each profiles}}
             {{#if url}}
-              <span class="url">
-                <a href="{{url}}">{{url}}</a>
-              </span>
-              {{#unless @last}}<span class="divider">|</span>{{/unless}}
+              <span class="basics-contact-item"><a href="{{url}}">{{STRIP_PROTOCOL url}}</a></span>
             {{/if}}
           {{/each}}
         </div>
       {{/if}}
-
-    </div>
+    {{/if}}
   </div>
-
 {{/resume.basics}}

@@ -1,5 +1,5 @@
 body {
-  font-family: "Times New Roman", Times, sans-serif;
+  font-family: "Times New Roman", Times, serif;
   /* 13px to 15px looks good */
   font-size: 15px;
   /* 1.38, 1.4, or 1.5 looks good */
@@ -49,31 +49,29 @@ a {
 }
 
 .basics {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.basics>* {
-  flex-grow: 1;
-  flex-shrink: 1;
-  flex-basis: 30%;
-}
-
-#basics-center-content {
   text-align: center;
-  font-size: 30px;
+  margin-bottom: 10px;
 }
 
-#basics-right-content {
-  text-align: right;
+.basics-name {
+  font-size: 33px;
+  font-weight: normal;
+  margin: 0 0 2px 0;
+  line-height: 1.1;
+}
+
+.basics-contact-row {
   font-size: 13px;
+  line-height: 1.2;
 }
 
-.basics .divider {
-  font-weight: bold;
-  margin-left: 5px;
-  margin-right: 5px;
+.basics-contact-row:empty {
+  display: none;
+}
+
+.basics-contact-item + .basics-contact-item::before {
+  content: "·";
+  margin: 0 6px;
 }
 
 .section-block {
@@ -84,14 +82,15 @@ a {
 .section-name {
   color: #004687;
   display: block;
-  font-weight: bold;
+  font-weight: 600;
+  font-size: 18px;
 }
 
 .section-line {
   border-color: none;
   border-style: hidden;
   border-width: 1px;
-  margin-top: 6px;
+  margin-top: 3px;
   margin-bottom: 3px;
 }
 
@@ -110,7 +109,9 @@ a {
 }
 
 .block-header .date {
-  font-weight: bold;
+  font-weight: normal;
+  font-style: italic;
+  color: #555;
   text-align: right;
   margin-left: auto;
   white-space: nowrap;
@@ -121,8 +122,15 @@ a {
   text-align: left;
 }
 
+#work-block .block-header .organization {
+  font-weight: normal;
+  font-style: italic;
+  color: #555;
+}
+
 .block-header .title {
-  font-weight: bold;
+  font-weight: 600;
+  font-size: 16px;
   text-align: left;
 }
 
@@ -135,6 +143,7 @@ a {
 .section-content {
   display: block;
   line-height: 1.15;
+  padding-left: 6px;
 }
 
 .section-content ul {
@@ -145,6 +154,11 @@ a {
 
 .highlights li {
   margin-bottom: 0;
+}
+
+.job-meta {
+  font-style: italic;
+  color: #555;
 }
 
 .job-summary {

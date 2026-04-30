@@ -15,10 +15,12 @@ fs.readdirSync(partialsDir)
     Handlebars.registerPartial(path.basename(filename, extname), template),
   )
 
-// Handlebars.registerHelper('STRIP_PROTOCOL', urlStr => {
-//   const result = urlStr.replace(/(^\w+:|^)\/\//, '');
-//   return result;
-// })
+// Strip URL display chrome for visual cleanliness in the rendered resume:
+// removes the protocol (https://), the www. prefix, and any trailing slash
+// so "https://www.linkedin.com/in/aegershman/" renders as "linkedin.com/in/aegershman".
+Handlebars.registerHelper('STRIP_PROTOCOL', urlStr =>
+  urlStr.replace(/^https?:\/\//, '').replace(/^www\./, '').replace(/\/$/, '')
+)
 
 Handlebars.registerHelper('MONTH_YEAR', dateString =>
   // https://dockyard.com/blog/2020/02/14/you-probably-don-t-need-moment-js-anymore

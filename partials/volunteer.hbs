@@ -2,7 +2,7 @@
   <div id="volunteer" class="section-block">
     <div class="section-intro">
       <div class="section-name">
-        <span>VOLUNTEERING</span>
+        <span>Volunteering</span>
       </div>
       <div class="section-intro-line"></div>
     </div>
@@ -10,7 +10,6 @@
       {{#each resume.volunteer}}
         <div class="block-header">
           <span class="title">{{position}}</span>
-          <span class="organization">{{organization}}</span>
           {{#if startDate}}
             <span class="date">
               {{#if (IF_DATES_HAVE_SAME_MONTH_AND_YEAR startDate endDate)}}
@@ -22,6 +21,9 @@
             </span>
           {{/if}}
         </div>
+
+        <div class="job-meta">{{organization}}</div>
+
         {{#if website}}
           <div class="website"><a href="{{website}}">{{website}}</a></div>
         {{/if}}
