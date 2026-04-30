@@ -10,8 +10,10 @@
       {{#each resume.work}}
         <div class="job-block">
           <div class="block-header">
+            {{!-- TODO honestly, kind of nicer to have it be pulled to the left so eyes aren't darting all over --}}
             <span class="organization">{{name}}</span>
             <span class="title">{{position}}</span>
+            {{!-- TODO but DATE can stay to the right --}}
             <span class="date">
               <time datetime="{{startDate}}">{{MONTH_YEAR startDate}}</time> &mdash;
               {{#if endDate}}<time datetime="{{endDate}}">{{MONTH_YEAR endDate}}</time>{{else}}Present{{/if}}
@@ -19,7 +21,7 @@
           </div>
 
           <div class="display-none">
-            {{!-- note: this is to enable any automated parsing of content --}}
+            {{!-- hidden for now; left here in case we want to make it visible in the future --}}
             {{#if location}}
               <span class="location">{{location}}</span>
             {{/if}}
