@@ -25,9 +25,10 @@
     "style.css"
   ],
   "scripts": {
-    "export": "npm run export:html && npm run export:pdf",
+    "export": "npm run export:html && npm run export:pdf && npm run export:pdf-thomasdavis",
     "export:html": "resumed render -o docs/index.html -t jsonresume-theme-straightforward",
     "export:pdf": "resumed export -o docs/index.pdf -t jsonresume-theme-straightforward",
+    "export:pdf-thomasdavis": "resumed export resume.thomasdavis.json -o docs/thomasdavis.pdf -t jsonresume-theme-straightforward",
     "lint": "npm run lint:eslint && npm run lint:pa11y",
     "lint:eslint": "eslint .",
     "lint:pa11y": "pa11y --reporter=cli $(pwd)/docs/index.html",

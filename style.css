@@ -147,6 +147,10 @@ a {
   margin-bottom: 0;
 }
 
+.job-summary {
+  margin-top: 3px;
+}
+
 .section-content .title {
   font-weight: bold;
 }
