@@ -111,19 +111,13 @@ a {
 #volunteer .block-header {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-}
-
-#work-block .block-header>*,
-#volunteer .block-header>* {
-  flex-grow: 1;
-  flex-shrink: 1;
-  flex-basis: 30%;
 }
 
 .block-header .date {
   font-weight: bold;
   text-align: right;
+  margin-left: auto;
+  white-space: nowrap;
 }
 
 .block-header .organization {
@@ -133,7 +127,13 @@ a {
 
 .block-header .title {
   font-weight: bold;
-  text-align: center;
+  text-align: left;
+}
+
+#work-block .block-header .organization::before,
+#volunteer .block-header .organization::before {
+  content: "\00a0|\00a0";
+  font-weight: normal;
 }
 
 .section-content {
@@ -261,8 +261,8 @@ a {
           <div class="section-content">
               <div class="job-block">
                 <div class="block-header">
-                  <span class="organization">Pied Piper</span>
                   <span class="title">CEO/President</span>
+                  <span class="organization">Pied Piper, Palo Alto, CA</span>
                   <span class="date">
                     <time datetime="2013-12-01">Dec 2013</time> &mdash;
                     <time datetime="2014-12-01">Dec 2014</time>
@@ -270,7 +270,6 @@ a {
                 </div>
 
                 <div class="display-none">
-                    <span class="location">Palo Alto, CA</span>
                 </div>
 
                   <ul class="highlights">
@@ -291,8 +290,8 @@ a {
           </div>
           <div class="section-content">
               <div class="block-header">
-                <span class="organization">CoderDojo</span>
                 <span class="title">Teacher</span>
+                <span class="organization">CoderDojo</span>
                   <span class="date">
                       Jan 2012 &mdash;
                       Jan 2013
