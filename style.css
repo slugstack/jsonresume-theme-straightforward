@@ -102,19 +102,13 @@ a {
 #volunteer .block-header {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-}
-
-#work-block .block-header>*,
-#volunteer .block-header>* {
-  flex-grow: 1;
-  flex-shrink: 1;
-  flex-basis: 30%;
 }
 
 .block-header .date {
   font-weight: bold;
   text-align: right;
+  margin-left: auto;
+  white-space: nowrap;
 }
 
 .block-header .organization {
@@ -124,7 +118,13 @@ a {
 
 .block-header .title {
   font-weight: bold;
-  text-align: center;
+  text-align: left;
+}
+
+#work-block .block-header .organization::before,
+#volunteer .block-header .organization::before {
+  content: "\00a0|\00a0";
+  font-weight: normal;
 }
 
 .section-content {
