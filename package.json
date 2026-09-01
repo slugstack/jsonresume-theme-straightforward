@@ -44,7 +44,7 @@
     "html-validate": "^11.0.0",
     "jest": "^30.0.2",
     "jsonresume-theme-straightforward": "file:.",
-    "pa11y": "^9.0.0",
+    "pa11y": "^10.0.0",
     "resumed": "^6.1.0"
   }
 }
